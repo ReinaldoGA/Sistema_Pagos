@@ -1,0 +1,27 @@
+﻿@model FunerariaProyecto.ViewModels.UserView
+@{
+    ViewBag.Title = "AddRoles";
+}
+
+<h2>Agregar Rol a Usuario: @Model.Name</h2>
+<h3>@ViewBag.Error</h3>
+
+@using (Html.BeginForm("AddRoles", "Users", new { userID = Model.UserId }, FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Role.RoleID, "RoleID", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("RoleID", null, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Role.RoleID, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    @Html.ActionLink("Regresar", "Roles",new {userID= Model.UserId },new { @class = "btn btn-success" })
+    <input type="submit" value="Agregar Rol" class="btn btn-info" />
+
+}
+

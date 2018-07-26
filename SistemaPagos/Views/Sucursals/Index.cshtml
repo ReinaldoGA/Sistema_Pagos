@@ -1,0 +1,60 @@
+﻿@model IEnumerable<FunerariaProyecto.Models.Sucursal>
+
+@{
+    /**/
+
+    ViewBag.Title = "Sucursales";
+    ViewBag.Icon = "fa-location-arrow";
+    ViewBag.Parent = "Index";
+}
+
+<div class=" panel panel-primary">
+    <div class="panel-heading">Listado de Sucursales</div>
+    <div class="panel-body">
+        <div>
+            <p>
+                @Html.ActionLink("Nueva Sucursal", "Create", null, new { @class = "btn btn-primary" })
+
+            </p>
+
+
+
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nombre)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Direccion)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Telefono)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nombre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Direccion)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Telefono)
+                        </td>
+                        <td>
+                            @*@Html.ActionLink("Editar", "Edit", new { id=item.SucursalId }) |
+                                @Html.ActionLink("Detalle", "Details", new { id=item.SucursalId }) |
+                                @Html.ActionLink("Eliminar", "Delete", new { id=item.SucursalId })*@
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+</div>
+

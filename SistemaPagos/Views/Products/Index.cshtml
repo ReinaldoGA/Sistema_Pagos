@@ -1,0 +1,73 @@
+﻿@model IEnumerable<FunerariaProyecto.Models.Product>
+
+@{
+    ViewBag.Title = "Productos";
+    ViewBag.Icon = "fa fa-plus";
+    ViewBag.Parent = "Index";
+}
+
+<h2></h2>
+
+<div class=" panel panel-primary">
+    <div class="panel-heading">Listado de Productos</div>
+    <div class="panel-body">
+        <div>
+            <p>
+                @Html.ActionLink("Nuevo Producto", "Create", null, new { @class = "btn btn-primary" })
+               @* @Html.ActionLink("consulta pagos", "Index", null, new { @class = "btn btn-primary" })*@
+            </p>
+
+
+            @*<for<m method="get" action="~/Controllers/cliente/ConsultaCliente">
+                    <p>
+
+                     <input type="search" name="NombreCliente" />
+                      <input type="submit" value="Consultar" /> <input type="submit" value="Mostrar Todos" />
+
+                    </p>
+                </form>*@
+
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.descripcion)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.precio)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.fecha)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.stock)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.descripcion)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.precio)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.fecha)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.stock)
+                        </td>
+                        <td>
+                            @*@Html.ActionLink("Editar", "Edit", new { id = item.productoId }) |
+                            @Html.ActionLink("Detalle", "Details", new { id = item.productoId }) |
+                            @Html.ActionLink("Elimar", "Delete", new { id = item.productoId })*@
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,167 @@
+﻿@model FunerariaProyecto.Models.Cliente
+
+@{
+    ViewBag.Title = "Crear Cliente";
+}
+
+
+
+@using (Html.BeginForm("Create","Clientes",FormMethod.Post,new {@class= "form-validate" }))
+{
+    @Html.AntiForgeryToken()
+
+<div>
+    <input hidden type="text" id="dtDetalle" name="dtDetalle" />
+</div>
+    <div class="card">
+        <div class="card-body">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <section class="panel">
+                <header class="panel-primary panel-heading">
+                    Nuevo Cliente
+                </header>
+                <div class="panel-body">
+                    <div class="row m-bot15">
+                        <div class="col-sm-2 ">
+                            @Html.LabelFor(model => model.ClienteCodigo, "Carnet", htmlAttributes: new { @class = "control-label " })
+                            @Html.EditorFor(model => model.ClienteCodigo, new { htmlAttributes = new { @class = "form-control required" } })
+                            @Html.ValidationMessageFor(model => model.ClienteCodigo, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-sm-4">
+                            @Html.LabelFor(model => model.SucursalId, "Sucursal", htmlAttributes: new { @class = "control-label" })
+
+                            @Html.DropDownList("SucursalId", null, htmlAttributes: new { @class = "form-control required" })
+                            @Html.ValidationMessageFor(model => model.SucursalId, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-sm-4">
+                            @Html.LabelFor(model => model.PlanId, "Plan", htmlAttributes: new { @class = "control-label" })
+                            @Html.DropDownList("PlanId", null, htmlAttributes: new { @class = "form-control required" })
+                            @Html.ValidationMessageFor(model => model.PlanId, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-sm-6">
+                            @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
+                            @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control required", @minlength = "5" } })
+                            @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="col-sm-4">
+                            @Html.LabelFor(model => model.Cedula, htmlAttributes: new { @class = "control-label" })
+                            @Html.EditorFor(model => model.Cedula, new { htmlAttributes = new { @class = "form-control", @minlength="13",@placeholder="000-0000000-0" } })
+                            @Html.ValidationMessageFor(model => model.Cedula, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-sm-6">
+                            @Html.LabelFor(model => model.Direccion, htmlAttributes: new { @class = "control-label col-md-2" })
+                            @Html.EditorFor(model => model.Direccion, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Direccion, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="col-sm-3">
+                            @Html.LabelFor(model => model.Telefono, htmlAttributes: new { @class = "control-label col-md-2" })
+                            @Html.EditorFor(model => model.Telefono, new { htmlAttributes = new { @class = "form-control",@placeholder="000-000-0000" } })
+                            @Html.ValidationMessageFor(model => model.Telefono, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="col-sm-3">
+
+                            @Html.LabelFor(model => model.Fecha, htmlAttributes: new { @class = "control-label" })
+                            @Html.EditorFor(model => model.Fecha, new { htmlAttributes = new { @class = "form-control required" } })
+                            @Html.ValidationMessageFor(model => model.Fecha, "", new { @class = "text-danger" })
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <section class="panel">
+                                <header class="panel-heading">
+                                    Dependientes
+                                </header>
+                                <div class="panel-body">
+                                    <form class="form-inline" role="form">
+                                        <div class="form-group col-sm-3">
+                                            <label class="control-label" for="NombreDep"> Nombre</label>
+                                            <input class="form-control" type="text" name="NombreDep" id="NombreDep" />
+                                        </div>
+                                        <div class="form-group col-sm-3">
+                                            <label class="control-label" for="Parentesco"> Parentesco</label>
+                                            <input class="form-control" type="text" name="Parentesco" id="Parentesco" />
+
+                                        </div>
+                                        <div class="form-group col-sm-4">
+                                            <label class="control-label" for="DatosAd"> Datos Adicionales</label>
+                                            <input class="form-control" type="text" name="DatosAd" id="DatosAd" />
+                                        </div>
+                                        <div class="form-group col-sm-3">
+                                            <div class="col-sm-3">
+                                                <input type="button" onclick="addDetalle()" value="Agregar" class="btn btn-default" />
+                                            </div>
+                                        </div>
+                                        <table id="tablecont" class="table table-stripper">
+                                            <thead>
+                                                <tr>
+                                                    <td>Nombre</td>
+                                                    <td>Parentesco</td>
+                                                    <td>Datos Adicionales</td>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tbody"></tbody>
+                                        </table>
+                                        <div class="form-group">
+                                            <div class="col-md-offset-2 col-md-10">
+                                                <input type="submit" value="Crear" class="btn btn-primary" />
+                                                @Html.ActionLink("Regresar", "Index")
+                                            </div>
+                                        </div>
+                                    </form> 
+                                </div>
+                            </section>
+                            
+                        </div>
+                       
+                    </div>
+                    
+                </div>
+               
+            </section>
+          
+        </div>
+    </div>
+    
+}
+
+
+
+<script>
+    var detalles = [];
+    var nombred = document.getElementById('NombreDep');
+    var parentezco = document.getElementById('Parentesco');
+    var otros = document.getElementById('DatosAd');
+    var dtDetalle = document.getElementById('dtDetalle');
+    var tbody = document.getElementById('tbody');
+    function addDetalle() {
+        var tr = '';
+
+        detalles.push({
+            "Nombre": nombred.value, "Parentezco": parentezco.value,
+            "OtrosDatos": otros.value
+        });
+
+        dtDetalle.value = JSON.stringify(detalles);
+        for (var i = 0; i < detalles.length; i++) {
+            tr += '<tr>'
+
+                + '<td>' + detalles[i]["Nombre"] + '</td>'
+                + '<td>' + detalles[i]["Parentezco"] + '</td>'
+                + '<td>' + detalles[i]["OtrosDatos"] + '</td>'
+                + '</tr>'
+        };
+        tbody.innerHTML = tr;
+
+        parentezco.value = "";
+        otros.value = "";
+        nombred.value = "";
+    }
+    
+
+
+</script>

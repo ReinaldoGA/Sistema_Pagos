@@ -1,0 +1,38 @@
+﻿@model FunerariaProyecto.Models.ProductFactura
+@{
+    ViewBag.Title = null;
+    Layout = null;
+}
+
+
+<h3>@ViewBag.Error</h3>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.Hidden("PlanId", (int)ViewBag.PlanId, new { id = "PlanId" });
+    @Html.Hidden("precioo", (decimal)ViewBag.Monto, new { id = "precioo" });
+    <div class="form-group">
+        
+        <div class="col-md-10">
+            <p>Concepto</p>
+            @Html.DropDownList("productoId", null, htmlAttributes: new { @class = "form-control required" })
+            @Html.ValidationMessageFor(model => model.productoId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+
+        <div class="col-md-10">
+            <p>Cantidad</p>
+            @Html.EditorFor(model => model.cantidad, new { htmlAttributes = new { @class = "form-control", value = "1" } })
+            @Html.ValidationMessageFor(model => model.cantidad, "", new { @class = "text-danger" })
+        </div>
+        <br />
+    </div>
+    
+    <input type="submit" value="Agregar Detalle" class="btn btn-success" />
+
+}

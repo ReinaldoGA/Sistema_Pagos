@@ -1,0 +1,99 @@
+﻿@model  IEnumerable<FunerariaProyecto.Models.ClienteDetalle>
+
+@{
+    ViewBag.Title = "Dependientes";
+   
+}
+
+<h2>Dependientes</h2>
+
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    @if (Model != null) { 
+    <table class=" table table-striped">
+        <thead>
+            <tr>
+                <td>
+                  Nombre
+                </td>
+                <td>
+                   Parentezco
+                </td>
+                <td>
+                  Otros datos
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+                {
+            <tr>
+                <td>
+                   @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Parentezco)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OtrosDatos)
+                </td>
+            </tr>
+            }
+        </tbody>
+        @*<dt>
+
+            @Html.DisplayNameFor(model => model.sucursal.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sucursal.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cedula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cedula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>*@
+
+    </table>
+    }
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.ClienteId }) |*@
+    @Html.ActionLink("Regresar", "Index")
+</p>

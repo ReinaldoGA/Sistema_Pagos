@@ -1,0 +1,237 @@
+﻿@model IEnumerable<FunerariaProyecto.ViewModels.FacturaView>
+
+@{
+    ViewBag.Title = "Listado Factura";
+    ViewBag.Icon = "fa fa-search";
+    ViewBag.Parent = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("GetFacturas", "Factura", FormMethod.Post, new { id = "formpdp", @class = "form-inline" }))
+{
+
+    <section class="panel">
+        <header class="panel-primary panel-heading">
+            Listado de Facturas
+        </header>
+        <div class="panel-body">
+            <div class="row m-bot15">
+                <div class="col-sm-2 ">
+
+                    <label for="desde" class="control-label">Desde</label>
+                    <input class="form-control" name="desde" id="desde" type="date" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
+                </div>
+                <div class="col-sm-2 ">
+
+                    <label for="hasta" class="control-label">Hasta</label>
+                    <input class="form-control" name="hasta" id="hasta" type="date" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
+                </div>
+
+                <div class="col-sm-3 ">
+
+                    <label for="clienteId" class="control-label">Clientes</label>
+                    @Html.DropDownList("clienteId", (SelectList)ViewBag.Clientes, "- Todos -", new { id = "clienteId", @class = "selectpicker pt-0" })
+
+                </div>
+                <div class="col-sm-2 ">
+                    <label for="sucursalId" class="control-label">Sucursales</label>
+                    @Html.DropDownList("sucursalId", (SelectList)ViewBag.Sucursal, "- Todos -", new { id = "sucursalId", @class = "form-control pt-0" })
+
+                </div>
+
+                <div class="col-sm-2 ">
+                    <label for="facEstatus" class="control-label">Estado</label>
+                    @Html.DropDownList("facEstatus", (SelectList)ViewBag.Estado, "- Todos -", new { id = "facEstatus", @class = "form-control pt-0" })
+
+                </div>
+                <div class="col-sm-2 ">
+                    <button type="button" id="btnBuscar" class="btn btn-primary">Buscar</button>
+                    <a role="button" id="btnReport" onclick="verreporte()" class="btn btn-info">Reporte</a>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <table id="DataTable" class="display" width="100%">
+            <tfoot>
+                <tr>
+                    <th colspan="5" style="text-align:right">Total:</th>
+                    <th></th>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+
+}
+
+@section scripts
+{
+    <link type="text/css" href="~/Content/css/datatables.min.css" />
+    <script type="text/javascript" src="~/Content/js/datatables.min.js"></script>
+    <script type="text/javascript">
+
+            $("#btnBuscar").on("click", function () {
+
+                var Sucursal = document.getElementById("sucursalId");
+                var Cliente = document.getElementById("clienteId");
+                var desde = document.getElementById("desde");
+                var hasta = document.getElementById("hasta");
+                var facEstatus = document.getElementById('facEstatus');
+
+                var Form = new FormData();
+                var Req = new XMLHttpRequest();
+
+                Form.append('desde', desde.value);
+                Form.append('hasta', hasta.value);
+                Form.append('sucursalid', Sucursal.value);
+                Form.append('clienteId', Cliente.value);
+                Form.append('facEstatus', facEstatus.value);
+
+                try {
+                Req.open("post", '@Url.Action("GetFacturas", "Factura")', true);
+                var data = Req.addEventListener('load', function createGrid() {
+
+                    var obj = JSON.parse(Req.response);
+
+                    var datos = Object.keys(obj).map(function (k) { return obj[k] });
+                    $("#DataTable").DataTable(
+                        {
+                            "destroy": true,
+                            "searching": true,
+                            "ordering": false,
+                            "processing": true,
+                            "paging": true,
+                            //"dom": "<'table-wrapper'<t>><'row'><'row d-flex justify-content-between'<'col col-md-6'i>  <'col col-md-6'<'my-4'p>>>",
+                            "data": datos,
+                            "columns":
+                            [
+                                {
+                                    title: "No. Factura",
+                                    data : "FacturaId"
+                                },
+                                {
+                                    title: "Nombre Cliente",
+                                    data: "ClienteNombre"
+                                },
+                                {
+                                    title: "Sucursal",
+                                    data: "ClienteSucursal"
+                                },
+                                {
+                                    title: "Plan",
+                                    data: "ClientePlan"
+                                },
+                                {
+                                    title: "Estado",
+                                    data: "estado"
+
+                                },
+                                {
+                                    title: "Monto",
+                                    data: "Monto",
+                                    "render": function (data)
+                                    {
+                                        return data;
+                                    }
+                                },
+                                {
+                                    title: "",
+                                    data: "FacturaId",
+                                    "render": function (data)
+                                    {
+                                        var link = '@Url.Action("ReimprimirFactura", "Factura", new  { id= "-1" })'
+                                            link = link.replace("-1", data);
+                                        return "<a target='_blank' href="+link+">ReImprimir</a>";
+                                    }
+                                },
+                                 {
+                                    title: "",
+                                    data: "FacturaId",
+                                    "render": function (data)
+                                    {
+                                        var link = '@Url.Action("AprobarFactura", "Factura", new  { id= "-1" })'
+                                            link = link.replace("-1", data);
+                                            return "<a href=" + link + ">Aprobar</a>";
+                                    }
+                                },
+                            ],
+                            "footerCallback": function (row, data, start, end, display) {
+                                var api = this.api(), data;
+
+                                // Remove the formatting to get integer data for summation
+                                var intVal = function (i) {
+                                    return typeof i === 'string' ?
+                                        i.replace(/[\$,]/g, '') * 1 :
+                                        typeof i === 'number' ?
+                                        i : 0;
+                                };
+
+                                // Total over all pages
+                                total = api
+                                    .column(5)
+                                    .data()
+                                    .reduce(function (a, b) {
+                                        return intVal(a) + intVal(b);
+                                    }, 0);
+
+                                // Total over this page
+                                pageTotal = api
+                                    .column(5, { page: 'current' })
+                                    .data()
+                                    .reduce(function (a, b) {
+                                        return intVal(a) + intVal(b);
+                                    }, 0);
+
+                                // Update footer
+                                $(api.column(5).footer()).html(
+                                    '  $' + total
+                                );
+                            }
+                        });
+                });
+                Req.send(Form);
+            }catch (e) {
+                console.log("Ha ocurrido un error contacte al administrador" + e.Message );
+            }
+            });
+    </script>
+    <script type="text/javascript">
+            function verreporte() {
+                var btnReport = document.getElementById('btnReport');
+                var Sucursal = document.getElementById('sucursalId');
+                var Cliente = document.getElementById('clienteId');
+                var Desde = document.getElementById('desde');
+                var Hasta = document.getElementById('hasta');
+                var facEstatus = document.getElementById('facEstatus');
+
+
+
+                var link = '@Url.Action("ReporteGeneral", "Factura", new { @sucursalId = "0", @clienteId = "-1",@fechade = "5",@fechaha = "6",@facestatus="7" })'
+                link= link.replace("0", Sucursal.value);
+                link = link.replace("-1", Cliente.value).replace("5", Desde.value).replace("6", Hasta.value).replace("7", facEstatus.value).replace("amp;", "");
+                link = link.replace("amp;", "");
+                link = link.replace("amp;", "");
+                link = link.replace("amp;", "");
+
+                console.log(link);
+                btnReport.href = link;
+                btnReport.setAttribute('target', '_blank');
+
+            }
+
+
+
+    </script>
+
+    <link rel="stylesheet" href="~/Content/css/bootstrap-select.min.css">
+    <script type="text/javascript" src="~/Content/js/bootstrap-select.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            document.getElementById("clienteId").setAttribute("data-live-search", "true");
+            $('.selectpicker').selectpicker();
+        });
+    </script>
+}

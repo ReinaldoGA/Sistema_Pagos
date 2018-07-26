@@ -1,0 +1,103 @@
+﻿@model IEnumerable<FunerariaProyecto.Models.Cliente>
+
+
+@{
+    ViewBag.Title = "Clientes";
+}
+
+<h2>Listado de Clientes</h2>
+<div class=" panel panel-primary">
+    <div class="panel-heading">Consulta</div>
+    <div class="panel-body">
+        <div>
+            <p>
+                @Html.ActionLink("Nuevo Cliente", "Create", null, new { @class = "btn btn-success" })
+              @*  @Html.ActionLink("consulta Clientes", "Index", null, new { @class = "btn btn-primary" })*@
+            </p>
+
+
+            <form method="get" action="~/Controllers/cliente/ConsultaCliente">
+                    <p>
+
+                     <input type="search" name="NombreCliente" />
+                      <input type="" value="Consultar" />
+                      <input type="" value="Mostrar Todos" />
+
+                    </p>
+                </form>
+
+            @*<p>
+                <h2> Buscar por nombre: @Html.TextBox("Nombre cliente")</h2>
+            </p>*@
+
+            <table class="table">
+                <tr>
+
+                    <th>
+                        Carnet
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.plan.descripcion)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.sucursal.Nombre)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nombre)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Cedula)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Direccion)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Telefono)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Fecha)
+                    </th>
+                   
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ClienteCodigo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.plan.descripcion)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.sucursal.Nombre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nombre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cedula)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Direccion)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Telefono)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Fecha)
+                        </td>
+                        
+                        <td>
+                            @*@Html.ActionLink("Editar", "Edit", new { id = item.ClienteId }) |*@
+                            @Html.ActionLink("Dependiente", "Details", new { id = item.ClienteId }) |
+                            @*@Html.ActionLink("Eliminar", "Delete", new { id = item.ClienteId })*@
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+</div>

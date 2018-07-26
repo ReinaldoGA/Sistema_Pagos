@@ -1,0 +1,123 @@
+﻿@model FunerariaProyecto.ViewModels.FacturaView
+@{
+    ViewBag.Title = "NuevaFactura";
+}
+<script>	var detalles = []</script>
+
+<h3>@ViewBag.Error</h3>
+<h3>@ViewBag.Message</h3>
+@using (Html.BeginForm("NuevaFactura", "Factura", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Cliente</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.DropDownList("ClienteId", null, htmlAttributes: new { @class = "form-control", id = "ClienteId" })
+                @Html.ValidationMessageFor(model => model.Cliente.ClienteId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <input id="dtDetalles" name="dtDetalles" style="visibility:hidden;" />
+
+        @*@Html.ActionLink("Agregar Pagos", "AddProduct", new { @class="btn btn-primary", id="AddProduct"}) *@
+        <a class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="AddProduct">Agregar Pagos</a>
+        @*<input type="button" value="Agregar Pagos" id="AddProduct" class="btn btn-primary" />*@
+        <input type="submit" value="Guardar Pago" id="NuevaFactura" class="btn btn-info" />
+    </div>
+}
+<h2> Detalle de pagos</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Products.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Products.precio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Products.cantidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Products.valor)
+        </th>
+
+    </tr>
+    @for (int i = 0; i < Model.Product.Count; i++)
+    {
+        <script type='text/javascript'>
+            detalles.push({ "descripcion": '@Model.Product[i].descripcion', "precio": '@float.Parse(Model.Product[i].precio.ToString())', "cantidad": '@Model.Product[i].cantidad', "valor": '@Model.Product[i].valor', "productoId": '@Model.Product[i].productoId' });
+        </script>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Product[i].descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.Product[i].precio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Product[i].cantidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Product[i].valor)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.Product[i].productoId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = Model.Product[i].productoId })
+            </td>
+        </tr>
+    }
+
+</table>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="modalAddBody">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="~/Scripts/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+            var dtDetalle = document.getElementById("dtDetalles");
+
+            dtDetalle.value = JSON.stringify(detalles);
+
+
+            var cliente = document.getElementById("ClienteId");
+            var producto = document.getElementById("Addproduct");
+
+            @*producto.addEventListener("click", function () {
+
+                var link = '@Url.Action("AddProduct", "Factura", new { ClienteId = "-1" })'
+                link = link.replace("-1", cliente.value);
+
+                producto.href = link;
+            });*@
+
+
+
+            $("#AddProduct").click(function () {
+                var url = "/Factura/AddProduct?ClienteId=" + cliente.value;
+
+                $("#modalAddBody").load(url, function () {
+                    $("#myModal").modal("show");
+                });
+
+            });
+
+
+
+</script>
