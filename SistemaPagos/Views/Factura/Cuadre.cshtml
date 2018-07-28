@@ -1,68 +1,73 @@
-﻿@model IEnumerable<FunerariaProyecto.ViewModels.FacturaView>
+﻿@*@model IEnumerable<FunerariaProyecto.ViewModels.FacturaView>*@
 
 @{
-                /**/
+    /**/
 
-                /**/
+    /**/
 
-                ViewBag.Title = "Listado Factura";
-                ViewBag.Icon = "fa fa-search";
-                ViewBag.Parent = "Index";
-                Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Cuadre Por Usuario";
+    ViewBag.Icon = "fa fa-money";
+    ViewBag.Parent = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@using (Html.BeginForm("GetFacturas", "Factura", FormMethod.Post, new { id = "formpdp", @class = "form-inline" }))
+@using (Html.BeginForm("GetCuadres", "Factura", FormMethod.Post, new { id = "formpdp", @class = "form-inline" }))
 {
 
-            <div class="panel panel-primary">
-                <header class="panel-heading blue">
-                    Criterio de Busqueda
-                </header>
-                <div class="panel-body">
-                    <div class="row m-bot15">
-                        <div class="col-sm-2 ">
-                            <label for="desde" class="control-label">Desde</label>
-                            <input class="form-control" name="desde" id="desde" type="date" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
-                        </div>
-                        <div class="col-sm-2 ">
+    <div class="panel panel-primary">
+        <header class="panel-heading blue">
+            Criterio de Busqueda
+        </header>
+        <div class="panel-body">
+            <div class="row m-bot15">
+                <div class="col-sm-2 ">
+                    <label for="desde" class="control-label">Desde</label>
+                    <input class="form-control" name="desde" id="desde" type="date" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
+                </div>
+                <div class="col-sm-2 ">
 
-                            <label for="hasta" class="control-label">Hasta</label>
-                            <input class="form-control" name="hasta" id="hasta" type="date" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
-                        </div>
-
-                        <div class="col-sm-3 ">
-                            <label for="clienteId" class="control-label">Clientes</label>
-                            @Html.DropDownList("clienteId", (SelectList)ViewBag.Clientes, "- Todos -", new { id = "clienteId", @class = "selectpicker" })
-
-                        </div>
-                        <div class="col-sm-2 ">
-                            <label for="sucursalId" class="control-label">Sucursales</label>
-                            @Html.DropDownList("sucursalId", (SelectList)ViewBag.Sucursal, "- Todos -", new { id = "sucursalId", @class = "form-control" })
-                        </div>
-                        <div class="col-sm-2 ">
-                            <label for="facEstatus" class="control-label">Estado</label>
-                            @Html.DropDownList("facEstatus", (SelectList)ViewBag.Estado, "- Todos -", new { id = "facEstatus", @class = "form-control" })
-                        </div>
-                        <div class="col-sm-2 ">
-                            <button type="button" id="btnBuscar" class="btn btn-primary">Buscar</button>
-                            <a role="button" id="btnReport" onclick="verreporte()" class="btn btn-info">Reporte</a>
-
-                        </div>
-                    </div>
-                    <table id="DataTable" class="table">
-                        <tfoot>
-                            <tr>
-                                <th colspan="5" style="text-align:right">Total:</th>
-                                <th></th>
-                            </tr>
-                        </tfoot>
-                    </table>
+                    <label for="hasta" class="control-label">Hasta</label>
+                    <input class="form-control" name="hasta" id="hasta" type="date" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
                 </div>
 
+                <div class="col-sm-3 ">
+                    <label for="clienteId" class="control-label">Clientes</label>
+                    @Html.DropDownList("clienteId", (SelectList)ViewBag.Clientes, "- Todos -", new { id = "clienteId", @class = "selectpicker" })
 
+                </div>
+                <div class="col-sm-2 ">
+                    <label for="sucursalId" class="control-label">Sucursales</label>
+                    @Html.DropDownList("sucursalId", (SelectList)ViewBag.Sucursal, "- Todos -", new { id = "sucursalId", @class = "form-control" })
+                </div>
+                <div class="col-sm-2 ">
+                    <label for="facEstatus" class="control-label">Estado</label>
+                    @Html.DropDownList("facEstatus", (SelectList)ViewBag.Estado, "- Todos -", new { id = "facEstatus", @class = "form-control" })
+                </div>
 
-               
+                <div class="col-sm-2 ">
+                    <label for="UserName" class="control-label">Usuario</label>
+                    @Html.DropDownList("UserName", (SelectList)ViewBag.Users, "- Todos -", new { id = "UserName", @class = "form-control" })
+                </div>
+                <div style="padding-top:25px" class="col-sm-2 ">
+                    <button type="button" id="btnBuscar" class="btn btn-primary">Buscar</button>
+                    @*<a role="button" id="btnReport" onclick="verreporte()" class="btn btn-info">Reporte</a>*@
+
+                </div>
             </div>
+            <table id="DataTable" class="table">
+                <tfoot>
+                    <tr>
+                        <th colspan="5" style="text-align:right">Total:</th>
+                        <th></th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+
+
+
+    </div>
 
 
 
@@ -92,7 +97,7 @@
                 Form.append('facEstatus', facEstatus.value);
 
                 try {
-                Req.open("post", '@Url.Action("GetFacturas", "Factura")', true);
+                Req.open("post", '@Url.Action("GetCuadre", "Factura")', true);
                 var data = Req.addEventListener('load', function createGrid() {
 
                     var obj = JSON.parse(Req.response);
@@ -108,7 +113,11 @@
                             //"dom": "<'table-wrapper'<t>><'row'><'row d-flex justify-content-between'<'col col-md-6'i>  <'col col-md-6'<'my-4'p>>>",
                             "data": datos,
                             "columns":
-                            [
+                                [
+                                    {
+                                        title: "Usuario",
+                                        data: "UserName"
+                                    },
                                 {
                                     title: "No. Factura",
                                     data : "FacturaId"
@@ -172,7 +181,7 @@
 
                                 // Total over all pages
                                 total = api
-                                    .column(5)
+                                    .column(7)
                                     .data()
                                     .reduce(function (a, b) {
                                         return intVal(a) + intVal(b);
@@ -180,14 +189,14 @@
 
                                 // Total over this page
                                 pageTotal = api
-                                    .column(5, { page: 'current' })
+                                    .column(7, { page: 'current' })
                                     .data()
                                     .reduce(function (a, b) {
                                         return intVal(a) + intVal(b);
                                     }, 0);
 
                                 // Update footer
-                                $(api.column(5).footer()).html(
+                                $(api.column(7).footer()).html(
                                     '  $' + total
                                 );
                             }

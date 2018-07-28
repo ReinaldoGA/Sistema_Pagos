@@ -68,9 +68,10 @@ namespace FunerariaProyecto.Controllers
                             var cabecera = new Facturas()
                             {
                                 FacturaId = idHeader,
-                                ClienteId = facturaView.ClienteId,
+                                ClienteId = facturaView.ClienteId2,
                                 FechaFactura = DateTime.Now,
                                 FacEstatus = 1,
+                                UserName = User.Identity.Name
                             };
                             db.Facturas.Add(cabecera);
 
@@ -234,6 +235,37 @@ namespace FunerariaProyecto.Controllers
 
             return View(result.AsParallel());
         }
+
+
+        public ActionResult Cuadre()
+        {
+
+
+            //var result = from r in db.Facturas
+            //             join e in db.Clientes on r.ClienteId.ToString() equals e.ClienteId.ToString()
+            //             join s in db.DetalleFacturas on r.FacturaId.ToString() equals s.FacturaId.ToString()
+            //             where (r.ClienteId == clienteId || clienteId == null && e.SucursalId == sucursalid || sucursalid == null && r.FacEstatus == facEstatus || facEstatus == null && r.UserName == UserName || UserName == null)
+            //             select new FacturaView()
+            //             {
+            //                 ClienteId = int.Parse(e.ClienteId.ToString()),
+            //                 ProductoId = s.productoId,
+            //                 Cliente = e,
+            //                 FacturaId = r.FacturaId,
+            //                 UserName  = r.UserName
+                             
+            //             };
+
+
+
+            ViewBag.Clientes = new SelectList(db.Clientes.ToList(), "clienteId", "Nombre");
+            ViewBag.Sucursal = new SelectList(db.Sucursals.ToList(), "SucursalId", "Nombre");
+            ViewBag.Estado = new SelectList(db.Database.SqlQuery<FacturasEstados>("Select FacEstatus,(case when FacEstatus = 1 then 'Pendiente' else 'Aprobada' end) as FacEstatusDesc  from Facturas group by FacEstatus").ToList(), "FacEstatus", "FacEstatusDesc");
+            ViewBag.Users = new SelectList(db.Database.SqlQuery<FacturaView>("Select distinct UserName from Facturas").ToList(), "UserName", "UserName");
+
+
+
+            return View();
+        }
         [Authorize(Roles = "User")]
         public ActionResult AprobarFactura(int? id)
         {
@@ -282,6 +314,8 @@ namespace FunerariaProyecto.Controllers
             var getPoliticas = from r in db.Facturas
                                join e in db.Clientes on r.ClienteId.ToString() equals e.ClienteId.ToString()
                                join s in db.DetalleFacturas on r.FacturaId.ToString() equals s.FacturaId.ToString()
+                               join p in db.Plans on e.PlanId.ToString() equals p.PlanId.ToString()
+
                                where ((r.ClienteId == clienteid || String.IsNullOrEmpty(clienteid.ToString())) && (e.SucursalId == sucursalid || String.IsNullOrEmpty(sucursalid.ToString()) && (r.FacEstatus == facEstatus || String.IsNullOrEmpty(facEstatus.ToString()))
                                && (r.FechaFactura >= desde.Date) && (r.FechaFactura <= hasta.Date)))
                                select new FacturaView()
@@ -290,7 +324,7 @@ namespace FunerariaProyecto.Controllers
                                    ClienteNombre = e.Nombre,
                                    ClienteSucursal = e.sucursal.Nombre,
                                    FacturaId = r.FacturaId,
-                                   ClientePlan = "",
+                                   ClientePlan = p.descripcion,
                                    cantidad = s.cantidad,
                                    precio = s.precio,
                                    estado = r.FacEstatus.ToString().Equals("1") ? "Pendiente" : "Aprobada",
@@ -302,6 +336,38 @@ namespace FunerariaProyecto.Controllers
             return Json(getPoliticas, JsonRequestBehavior.DenyGet);
 
         }
+
+        [Authorize(Roles = "SuperAdmin")]
+        [HttpPost]
+        public JsonResult GetCuadre(int? clienteid, int? sucursalid, DateTime desde, DateTime hasta, int? facEstatus,string UserName)
+        {
+
+            var getPoliticas = from r in db.Facturas
+                               join e in db.Clientes on r.ClienteId.ToString() equals e.ClienteId.ToString()
+                               join s in db.DetalleFacturas on r.FacturaId.ToString() equals s.FacturaId.ToString()
+                               join p in db.Plans on e.PlanId.ToString() equals p.PlanId.ToString()
+
+                               where ((r.ClienteId == clienteid || String.IsNullOrEmpty(clienteid.ToString())) && (e.SucursalId == sucursalid || String.IsNullOrEmpty(sucursalid.ToString()) &&  (r.UserName == UserName || String.IsNullOrEmpty(UserName.ToString()) && (r.FacEstatus == facEstatus || String.IsNullOrEmpty(facEstatus.ToString()))
+                               && (r.FechaFactura >= desde.Date) && (r.FechaFactura <= hasta.Date))))
+                               select new FacturaView()
+                               {
+                                   ProductoId = s.productoId,
+                                   ClienteNombre = e.Nombre,
+                                   ClienteSucursal = e.sucursal.Nombre,
+                                   FacturaId = r.FacturaId,
+                                   ClientePlan = p.descripcion,
+                                   cantidad = s.cantidad,
+                                   precio = s.precio,
+                                   estado = r.FacEstatus.ToString().Equals("1") ? "Pendiente" : "Aprobada",
+
+
+                               };
+
+
+            return Json(getPoliticas, JsonRequestBehavior.DenyGet);
+
+        }
+
         [Authorize(Roles = "View")]
         public ActionResult ReporteFactura()
         {

@@ -4,9 +4,9 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using FunerariaProyecto.Models;
+using FunerariaProyecto.ViewModels;
 using Newtonsoft.Json;
 
 namespace FunerariaProyecto.Controllers
@@ -20,7 +20,6 @@ namespace FunerariaProyecto.Controllers
         public ActionResult Index()
         {
             var clientes = db.Clientes.Include(c => c.plan).Include(c => c.sucursal);
-            //ViewBag.Clientes = db.ClienteDetalle.ToList().GroupBy(c=>c.ClienteID);
             return View(clientes.OrderBy(c=> c.ClienteCodigo).ToList());
         }
 
@@ -28,10 +27,7 @@ namespace FunerariaProyecto.Controllers
         public JsonResult GetClientes()
         {
             var clientes = db.Clientes.Include(c => c.plan).Include(c => c.sucursal);
-            /*db.Clientes.Include(c => c.plan).Include(c => c.sucursal);*/
             var clientese = clientes.OrderBy(c => c.ClienteCodigo).ToList();
-
-            //where ((r.ClienteId == clienteid || clienteid == null) && (e.SucursalId == sucursalid || sucursalid == null))
 
             return Json(clientese, JsonRequestBehavior.DenyGet);
 
@@ -66,6 +62,26 @@ namespace FunerariaProyecto.Controllers
             return View();
         }
 
+
+        public ActionResult HistoricoPagos(int ClienteId)
+        {
+            var result = from r in db.Facturas
+                         join e in db.Clientes on r.ClienteId.ToString() equals e.ClienteId.ToString()
+                         join s in db.DetalleFacturas on r.FacturaId.ToString() equals s.FacturaId.ToString()
+                         join p in db.Products on s.productoId equals p.productoId
+                         where (e.ClienteId == ClienteId)
+                         select new FacturaView()
+                         {
+                             ClienteNombre = e.Nombre,
+                             ProductName = p.descripcion,
+                             ClienteCodigo = e.ClienteCodigo,
+                             FacturaId = r.FacturaId,
+                             cantidad = s.cantidad,
+                             precio  = s.precio
+                         };
+            var resultado = result.ToList();
+            return View(resultado);
+        }
         // POST: Clientes/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
@@ -98,7 +114,6 @@ namespace FunerariaProyecto.Controllers
                      }
 
                }
-                
                
                 return RedirectToAction("Index");
             }

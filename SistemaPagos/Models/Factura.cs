@@ -13,6 +13,7 @@ namespace FunerariaProyecto.Models
         public DateTime FechaFactura { get; set; }
         public int ClienteId { get; set; } 
         public int FacEstatus { get; set; }
+        public string UserName { get; set; }
         public virtual Cliente Cliente { get; set; }
         public virtual ICollection<DetalleFactura> DetalleFacturas { get; set; }
 

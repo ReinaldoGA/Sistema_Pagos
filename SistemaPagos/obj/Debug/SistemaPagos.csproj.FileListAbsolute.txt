@@ -520,3 +520,4 @@ D:\WorkSpace\Sistema De Pagos\SistemaPagos\obj\Debug\SistemaPagos.csproj.CopyCom
 D:\WorkSpace\Sistema De Pagos\SistemaPagos\obj\Debug\SistemaPagos.dll
 D:\WorkSpace\Sistema De Pagos\SistemaPagos\obj\Debug\SistemaPagos.pdb
 D:\WorkSpace\Sistema De Pagos\SistemaPagos\obj\Debug\SistemaPagos.Migrations.Second.resources
+D:\WorkSpace\Sistema De Pagos\SistemaPagos\obj\Debug\SistemaPagos.Migrations.third.resources

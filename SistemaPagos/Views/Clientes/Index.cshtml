@@ -5,6 +5,8 @@
     /**/
 
     ViewBag.Title = "Clientes";
+    ViewBag.Icon = "fa fa-user";
+    ViewBag.Parent = "Index";
 }
 
 <div class=" panel panel-primary">
@@ -19,7 +21,7 @@
 
            
 
-            <table id="DataTable" class="table">
+            <table  id="DataTable" class="table">
 
             </table>
         </div>
@@ -190,6 +192,16 @@
                                         title: "Cedula",
                                         data: "ClienteCedula"
                                     },
+                                    {
+                                    title: "",
+                                    data: "ClienteId",
+                                    "render": function (data)
+                                    {
+                                        return '<a class="btn btn-success" title="Historico Pagos"  onclick="CargarPagos('+data+')" class="trigger-btn" href="#ModalPagos" data-toggle="modal"><i class="fa fa-money"></i></a>';
+
+                                            //<a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+                                    }
+                                },
                                 {
                                     title: "",
                                     data: "ClienteId",
@@ -198,7 +210,7 @@
                                         var link = '@Url.Action("DeleteConfirmed", "Clientes", new  { id= "-1" })'
                                         link = link.replace("-1", data);
 
-                                        return '<a class="btn btn-danger" onclick="Asignar('+data+')"     href="#myModal" class="trigger-btn" data-toggle="modal"><i class="icon_close_alt2"></i></a>';
+                                        return '<a class="btn btn-danger" title="Eliminar" onclick="Asignar('+data+')"     href="#myModal" class="trigger-btn" data-toggle="modal"><i class="icon_close_alt2"></i></a>';
 
                                             //<a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
                                     }
@@ -210,7 +222,7 @@
                                     {
                                        var link = '@Url.Action("Edit", "Clientes", new  { id= "-1" })'
                                             link = link.replace("-1", data);
-                                        return '<a class="btn btn-primary" href="' + link + '"><i class="fa fa-edit"></i></a>';
+                                        return '<a title="Editar" class="btn btn-primary" href="' + link + '"><i class="fa fa-edit"></i></a>';
                                     }
                                 },
                             ],
@@ -257,7 +269,7 @@
 }
 
 
-
+@* Modal Delete *@
                 @using (Html.BeginForm("Delete", "Clientes", FormMethod.Post))
                 {
                     <input class="hidden" id="id" name="id" />
@@ -285,8 +297,42 @@
                         </div>
                     </div>
                 }
+@* Fin Modal Delete *@
+
+
+@* Modal Historico Pagos *@
+
+                    <div class="modal fade" id="ModalPagos" >
+                        <div class="modal-dialog" >
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h5 class="modal-title">Historico Pagos</h5>
+
+                                </div>
+                                <div class="modal-body" id="modalPagosBody">
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+@* Fin Modal Historico Pagos *@
+
+
                 <script type="text/javascript">
                     function Asignar(a) {
                         document.getElementById("id").value = a;
                     }
+
+                    function CargarPagos(id)
+                    {
+                        var url = "/Clientes/HistoricoPagos?ClienteId=" + id;
+
+
+                        $("#modalPagosBody").load(url, function () {
+                            $("#ModalPagos").modal("show")
+                            
+                        });
+                    } 
                 </script>
