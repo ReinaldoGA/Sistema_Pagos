@@ -11,7 +11,7 @@
               <TextRun>
                 <Value>FUNERARIA HATO DAMAS</Value>
                 <Style>
-                  <FontSize>16pt</FontSize>
+                  <FontSize>18pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -21,6 +21,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox4</rd:DefaultName>
+        <Top>0.07812in</Top>
         <Left>5.46556cm</Left>
         <Height>0.75269cm</Height>
         <Width>11.09896cm</Width>
@@ -42,7 +43,9 @@
             <TextRuns>
               <TextRun>
                 <Value>PRESENTE EN TUS MOMENTOS TRISTES</Value>
-                <Style />
+                <Style>
+                  <FontSize>11pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style>
@@ -51,7 +54,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>0.85852cm</Top>
+        <Top>1.02168cm</Top>
         <Left>5.46556cm</Left>
         <Height>0.6cm</Height>
         <Width>11.09896cm</Width>
@@ -97,6 +100,7 @@
                             <TextRun>
                               <Value>CANTIDAD</Value>
                               <Style>
+                                <FontSize>14pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -131,7 +135,6 @@
                           <Style>Solid</Style>
                           <Width>1pt</Width>
                         </RightBorder>
-                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -151,6 +154,7 @@
                             <TextRun>
                               <Value>DESCRIPCION</Value>
                               <Style>
+                                <FontSize>14pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -185,7 +189,6 @@
                           <Style>Solid</Style>
                           <Width>1pt</Width>
                         </RightBorder>
-                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -205,6 +208,7 @@
                             <TextRun>
                               <Value>PRECIO</Value>
                               <Style>
+                                <FontSize>14pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -239,7 +243,6 @@
                           <Style>Solid</Style>
                           <Width>1pt</Width>
                         </RightBorder>
-                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -259,6 +262,7 @@
                             <TextRun>
                               <Value>TOTAL</Value>
                               <Style>
+                                <FontSize>14pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -293,7 +297,6 @@
                           <Style>Solid</Style>
                           <Width>1pt</Width>
                         </RightBorder>
-                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -317,7 +320,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!cantidad.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>14pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -348,7 +353,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!descripcion.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>14pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -378,6 +385,7 @@
                             <TextRun>
                               <Value>=Fields!precio.Value</Value>
                               <Style>
+                                <FontSize>14pt</FontSize>
                                 <Format>0.00;(0.00)</Format>
                               </Style>
                             </TextRun>
@@ -409,6 +417,7 @@
                             <TextRun>
                               <Value>=Fields!PRECIOTOTAL.Value</Value>
                               <Style>
+                                <FontSize>14pt</FontSize>
                                 <Format>0.00;(0.00)</Format>
                               </Style>
                             </TextRun>
@@ -454,7 +463,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DsFacturas</DataSetName>
-        <Top>5.27818cm</Top>
+        <Top>5.47662cm</Top>
         <Left>0.16784cm</Left>
         <Height>1.2cm</Height>
         <Width>22.3914cm</Width>
@@ -474,7 +483,7 @@
               <TextRun>
                 <Value>= First(Fields!Nombre.Value, "DsFacturas")</Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -482,7 +491,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>3.35377cm</Top>
+        <Top>3.55221cm</Top>
         <Left>1.83cm</Left>
         <Height>0.6cm</Height>
         <Width>9.26896cm</Width>
@@ -506,7 +515,7 @@
               <TextRun>
                 <Value>=First(Fields!Direccion.Value, "DsFacturas")</Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -514,7 +523,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>4.0596cm</Top>
+        <Top>4.25804cm</Top>
         <Left>2.40987cm</Left>
         <Height>0.6cm</Height>
         <Width>8.68909cm</Width>
@@ -546,8 +555,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>0.35601in</Top>
+        <Left>6.78909in</Left>
         <Height>0.6cm</Height>
-        <Width>4.48438cm</Width>
+        <Width>5.81926cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -568,7 +579,7 @@
               <TextRun>
                 <Value>= First(Fields!Telefono.Value, "DsFacturas")</Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -576,7 +587,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>3.35377cm</Top>
+        <Top>3.55221cm</Top>
         <Left>14.87617cm</Left>
         <Height>0.6cm</Height>
         <Width>7.68307cm</Width>
@@ -600,7 +611,7 @@
               <TextRun>
                 <Value>="Plan" &amp; " " &amp; First(Fields!descripcion1.Value, "DsFacturas")</Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -609,7 +620,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>4.0596cm</Top>
+        <Top>4.25804cm</Top>
         <Left>12.66249cm</Left>
         <Height>0.6cm</Height>
         <Width>9.89675cm</Width>
@@ -642,6 +653,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox17</rd:DefaultName>
+        <Top>0.07812in</Top>
         <Left>17.24428cm</Left>
         <Height>0.6cm</Height>
         <Width>2.67544cm</Width>
@@ -665,7 +677,7 @@
               <TextRun>
                 <Value>=First(Fields!Numero.Value, "DsFacturas")</Value>
                 <Style>
-                  <FontSize>12pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -673,6 +685,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox17</rd:DefaultName>
+        <Top>0.07812in</Top>
         <Left>19.955cm</Left>
         <Height>0.6cm</Height>
         <Width>3.10854cm</Width>
@@ -688,8 +701,8 @@
         </Style>
       </Textbox>
       <Line Name="Line1">
-        <Top>9.19457cm</Top>
-        <Left>1.15164cm</Left>
+        <Top>9.12842cm</Top>
+        <Left>0cm</Left>
         <Height>0cm</Height>
         <Width>6.12104cm</Width>
         <ZIndex>10</ZIndex>
@@ -700,8 +713,8 @@
         </Style>
       </Line>
       <Line Name="Line2">
-        <Top>9.19457cm</Top>
-        <Left>14.87617cm</Left>
+        <Top>9.12842cm</Top>
+        <Left>13.72453cm</Left>
         <Height>0cm</Height>
         <Width>5.98419cm</Width>
         <ZIndex>11</ZIndex>
@@ -720,6 +733,7 @@
               <TextRun>
                 <Value>ENTREGADO</Value>
                 <Style>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -730,8 +744,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>9.19457cm</Top>
-        <Left>1.92433cm</Left>
+        <Top>9.12842cm</Top>
+        <Left>0.77269cm</Left>
         <Height>0.6cm</Height>
         <Width>4.48438cm</Width>
         <ZIndex>12</ZIndex>
@@ -754,6 +768,7 @@
               <TextRun>
                 <Value>RECIBIDO</Value>
                 <Style>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -764,8 +779,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>9.19457cm</Top>
-        <Left>15.7793cm</Left>
+        <Top>9.12842cm</Top>
+        <Left>14.62766cm</Left>
         <Height>0.6cm</Height>
         <Width>4.48438cm</Width>
         <ZIndex>13</ZIndex>
@@ -788,7 +803,7 @@
               <TextRun>
                 <Value>Cliente:</Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -797,10 +812,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>3.35377cm</Top>
+        <Top>3.55221cm</Top>
         <Left>0.16784cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.62688cm</Width>
+        <Width>1.78563cm</Width>
         <ZIndex>14</ZIndex>
         <Style>
           <Border>
@@ -821,7 +836,7 @@
               <TextRun>
                 <Value>Direccion</Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -830,7 +845,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>4.0596cm</Top>
+        <Top>4.25804cm</Top>
         <Left>0.16784cm</Left>
         <Height>0.6cm</Height>
         <Width>2.17147cm</Width>
@@ -854,7 +869,7 @@
               <TextRun>
                 <Value>Telefono:</Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -863,7 +878,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>3.35377cm</Top>
+        <Top>3.55221cm</Top>
         <Left>12.66249cm</Left>
         <Height>0.6cm</Height>
         <Width>2.10785cm</Width>
@@ -886,7 +901,9 @@
             <TextRuns>
               <TextRun>
                 <Value>TEL.: 809-289-8181 / 829-521-2311</Value>
-                <Style />
+                <Style>
+                  <FontSize>11pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style>
@@ -895,7 +912,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>1.582cm</Top>
+        <Top>1.76279cm</Top>
         <Left>5.46556cm</Left>
         <Height>0.6cm</Height>
         <Width>11.09896cm</Width>
@@ -919,6 +936,7 @@
               <TextRun>
                 <Value>TOTAL</Value>
                 <Style>
+                  <FontSize>11pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -927,7 +945,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox22</rd:DefaultName>
-        <Top>6.98033cm</Top>
+        <Top>7.17877cm</Top>
         <Left>14.87617cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
@@ -951,6 +969,7 @@
               <TextRun>
                 <Value>=Sum(Fields!PRECIOTOTAL.Value, "DsFacturas")</Value>
                 <Style>
+                  <FontSize>11pt</FontSize>
                   <Format>0.00;(0.00)</Format>
                 </Style>
               </TextRun>
@@ -961,7 +980,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>6.98033cm</Top>
+        <Top>7.17877cm</Top>
         <Left>17.24428cm</Left>
         <Height>0.6cm</Height>
         <Width>4.82202cm</Width>
@@ -985,19 +1004,22 @@
               <TextRun>
                 <Value>NOTA:</Value>
                 <Style>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
               <TextRun>
                 <Value> FACTURA VALIDA SOLO CON SELLO SECO, EL SOCIO CON 3 MESES VENCIDO PIERDE LOS DERECHOS DE SERVICIOS</Value>
-                <Style />
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox24</rd:DefaultName>
-        <Top>3.13417in</Top>
+        <Top>3.13195in</Top>
         <Height>0.25in</Height>
         <Width>7.31241in</Width>
         <ZIndex>20</ZIndex>
@@ -1011,6 +1033,20 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Image Name="Image1">
+        <Source>Embedded</Source>
+        <Value>imagen</Value>
+        <Sizing>FitProportional</Sizing>
+        <Top>0.07812in</Top>
+        <Height>0.85211in</Height>
+        <Width>0.92099in</Width>
+        <ZIndex>21</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Image>
     </ReportItems>
     <Height>3.90821in</Height>
     <Style>
@@ -1019,7 +1055,7 @@
       </Border>
     </Style>
   </Body>
-  <Width>9.08013in</Width>
+  <Width>9.08014in</Width>
   <Page>
     <PageHeight>6in</PageHeight>
     <PageWidth>11in</PageWidth>
@@ -1098,6 +1134,16 @@
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
+  <EmbeddedImages>
+    <EmbeddedImage Name="imagen">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>ca9898f4-f58f-4db0-8944-2ed030f5940a</rd:ReportID>
 </Report>

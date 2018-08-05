@@ -1,0 +1,45 @@
+﻿@model FunerariaProyecto.ViewModels.UserView
+
+@{
+    ViewBag.Title = "Roles";
+}
+
+<h2>Roles Para El Usuario: @Model.Name</h2>
+
+<div class=" panel panel-primary">
+    <div class="panel-heading">Consulta</div>
+    <div class="panel-body">
+        <div>
+            <p>
+                @Html.ActionLink("Nuevo Rol", "AddRoles", new {userID= Model.UserId}, new { @class = "btn btn-info" })
+                @Html.ActionLink("regresar", "Index", null, new { @class = "btn btn-primary" })
+            </p>
+
+
+            @*<for<m method="get" action="~/Controllers/cliente/ConsultaCliente">
+                    <p>
+
+                     <input type="search" name="NombreCliente" />
+                      <input type="submit" value="Consultar" /> <input type="submit" value="Mostrar Todos" />
+
+                    </p>
+                </form>*@
+
+            <table class="table">
+               
+                @for (int i =0; i < Model.Roles.Count; i++)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => Model.Roles[i].Name)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Eliminar", "Delete", new { userID = Model.UserId, roleId = Model.Roles[i].RoleID })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+</div>

@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Users\victor\Desktop\Publicar</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\Reinaldo Arturo Garc\Desktop\Publish</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Antlr3.Runtime.dll">
@@ -22,61 +22,61 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/18/2018 23:45:18</publishTime>
     </File>
     <File Include="bin/es/EntityFramework.resources.dll">
-      <publishTime>01/18/2018 23:45:26</publishTime>
+      <publishTime>03/02/2015 10:02:42</publishTime>
     </File>
     <File Include="bin/es/EntityFramework.SqlServer.resources.dll">
-      <publishTime>01/18/2018 23:45:26</publishTime>
+      <publishTime>03/02/2015 10:02:42</publishTime>
     </File>
     <File Include="bin/es/Microsoft.AspNet.Identity.Core.resources.dll">
-      <publishTime>01/18/2018 23:45:28</publishTime>
+      <publishTime>04/03/2015 17:39:40</publishTime>
     </File>
     <File Include="bin/es/Microsoft.AspNet.Identity.EntityFramework.resources.dll">
-      <publishTime>01/18/2018 23:45:28</publishTime>
+      <publishTime>04/03/2015 17:39:40</publishTime>
     </File>
     <File Include="bin/es/Microsoft.AspNet.Identity.Owin.resources.dll">
-      <publishTime>01/18/2018 23:45:28</publishTime>
+      <publishTime>04/03/2015 17:39:40</publishTime>
     </File>
     <File Include="bin/es/Microsoft.Owin.Host.SystemWeb.resources.dll">
-      <publishTime>01/18/2018 23:45:28</publishTime>
+      <publishTime>02/13/2015 13:54:10</publishTime>
     </File>
     <File Include="bin/es/Microsoft.Owin.resources.dll">
-      <publishTime>01/18/2018 23:45:28</publishTime>
+      <publishTime>02/13/2015 13:54:12</publishTime>
     </File>
     <File Include="bin/es/Microsoft.Owin.Security.Facebook.resources.dll">
-      <publishTime>01/18/2018 23:45:28</publishTime>
+      <publishTime>02/13/2015 13:54:12</publishTime>
     </File>
     <File Include="bin/es/Microsoft.Owin.Security.Google.resources.dll">
-      <publishTime>01/18/2018 23:45:28</publishTime>
+      <publishTime>02/13/2015 13:54:12</publishTime>
     </File>
     <File Include="bin/es/Microsoft.Owin.Security.MicrosoftAccount.resources.dll">
-      <publishTime>01/18/2018 23:45:30</publishTime>
+      <publishTime>02/13/2015 13:54:14</publishTime>
     </File>
     <File Include="bin/es/Microsoft.Owin.Security.resources.dll">
-      <publishTime>01/18/2018 23:45:28</publishTime>
+      <publishTime>02/13/2015 13:54:14</publishTime>
     </File>
     <File Include="bin/es/Microsoft.Owin.Security.Twitter.resources.dll">
-      <publishTime>01/18/2018 23:45:30</publishTime>
+      <publishTime>02/13/2015 13:54:14</publishTime>
     </File>
     <File Include="bin/es/System.Web.Helpers.resources.dll">
-      <publishTime>01/18/2018 23:45:14</publishTime>
+      <publishTime>01/28/2015 04:34:36</publishTime>
     </File>
     <File Include="bin/es/System.Web.Mvc.resources.dll">
-      <publishTime>01/18/2018 23:45:14</publishTime>
+      <publishTime>01/28/2015 04:32:24</publishTime>
     </File>
     <File Include="bin/es/System.Web.Optimization.resources.dll">
-      <publishTime>01/18/2018 23:45:14</publishTime>
+      <publishTime>02/11/2014 15:58:40</publishTime>
     </File>
     <File Include="bin/es/System.Web.Razor.resources.dll">
-      <publishTime>01/18/2018 23:45:12</publishTime>
+      <publishTime>01/28/2015 04:32:36</publishTime>
     </File>
     <File Include="bin/es/System.Web.WebPages.Deployment.resources.dll">
-      <publishTime>01/18/2018 23:45:14</publishTime>
+      <publishTime>01/28/2015 04:34:36</publishTime>
     </File>
     <File Include="bin/es/System.Web.WebPages.Razor.resources.dll">
-      <publishTime>01/18/2018 23:45:14</publishTime>
+      <publishTime>01/28/2015 04:34:36</publishTime>
     </File>
     <File Include="bin/es/System.Web.WebPages.resources.dll">
-      <publishTime>01/18/2018 23:45:14</publishTime>
+      <publishTime>01/28/2015 04:34:36</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
       <publishTime>01/18/2018 23:45:24</publishTime>
@@ -127,7 +127,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/19/2018 23:22:16</publishTime>
     </File>
     <File Include="bin/Microsoft.SqlServer.Types.dll">
-      <publishTime>10/12/2016 15:26:34</publishTime>
+      <publishTime>12/10/2016 15:26:34</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
       <publishTime>01/18/2018 23:45:10</publishTime>
@@ -142,10 +142,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/19/2018 23:22:16</publishTime>
     </File>
     <File Include="bin/SistemaPagos.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/04/2018 14:01:13</publishTime>
     </File>
     <File Include="bin/SistemaPagos.pdb">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/04/2018 14:01:13</publishTime>
     </File>
     <File Include="bin/SqlServerTypes/x64/msvcr120.dll">
       <publishTime>03/04/2018 22:27:23</publishTime>
@@ -195,20 +195,74 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/bootstrap.min.css">
       <publishTime>01/18/2018 23:45:04</publishTime>
     </File>
+    <File Include="Content/css/bootstrap-colorpicker.css">
+      <publishTime>12/05/2017 03:28:40</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap-datepicker.css">
+      <publishTime>01/28/2018 03:46:50</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap-select.min.css">
+      <publishTime>07/24/2018 21:04:17</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap-theme.css">
+      <publishTime>11/01/2013 12:38:56</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap.min.css">
+      <publishTime>10/29/2013 16:47:02</publishTime>
+    </File>
     <File Include="Content/css/custom.css">
       <publishTime>01/19/2018 20:21:54</publishTime>
     </File>
     <File Include="Content/css/datatables.min.css">
       <publishTime>01/19/2018 20:21:54</publishTime>
     </File>
+    <File Include="Content/css/daterangepicker.css">
+      <publishTime>12/13/2017 09:27:02</publishTime>
+    </File>
+    <File Include="Content/css/elegant-icons-style.css">
+      <publishTime>10/25/2013 11:58:10</publishTime>
+    </File>
+    <File Include="Content/css/font-awesome.css">
+      <publishTime>05/30/2014 23:00:38</publishTime>
+    </File>
+    <File Include="Content/css/font-awesome.min.css">
+      <publishTime>05/30/2014 23:00:38</publishTime>
+    </File>
     <File Include="Content/css/fontastic.css">
       <publishTime>01/19/2018 20:21:54</publishTime>
+    </File>
+    <File Include="Content/css/fullcalendar.css">
+      <publishTime>08/23/2014 19:10:38</publishTime>
+    </File>
+    <File Include="Content/css/jquery-jvectormap-1.2.2.css">
+      <publishTime>08/17/2014 19:30:42</publishTime>
+    </File>
+    <File Include="Content/css/jquery-ui-1.10.4.min.css">
+      <publishTime>08/17/2014 19:31:02</publishTime>
+    </File>
+    <File Include="Content/css/line-icons.css">
+      <publishTime>10/28/2013 02:05:34</publishTime>
+    </File>
+    <File Include="Content/css/owl.carousel.css">
+      <publishTime>10/28/2013 14:42:58</publishTime>
+    </File>
+    <File Include="Content/css/style-responsive.css">
+      <publishTime>11/01/2013 18:31:02</publishTime>
     </File>
     <File Include="Content/css/style.blue.css">
       <publishTime>01/19/2018 20:21:54</publishTime>
     </File>
+    <File Include="Content/css/style.css">
+      <publishTime>02/12/2018 11:11:12</publishTime>
+    </File>
     <File Include="Content/css/style.default.css">
       <publishTime>01/19/2018 20:21:54</publishTime>
+    </File>
+    <File Include="Content/css/widgets.css">
+      <publishTime>07/22/2014 14:00:20</publishTime>
+    </File>
+    <File Include="Content/css/xcharts.min.css">
+      <publishTime>08/17/2014 19:33:04</publishTime>
     </File>
     <File Include="Content/fonts/dashboard.eot">
       <publishTime>01/19/2018 20:21:54</publishTime>
@@ -222,14 +276,194 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/fonts/dashboard.woff">
       <publishTime>01/19/2018 20:21:54</publishTime>
     </File>
+    <File Include="Content/js/additional-methods.min.js">
+      <publishTime>03/22/2013 15:20:16</publishTime>
+    </File>
+    <File Include="Content/js/bootstrap-colorpicker.js">
+      <publishTime>12/05/2017 03:28:40</publishTime>
+    </File>
+    <File Include="Content/js/bootstrap-datepicker.js">
+      <publishTime>01/28/2018 03:46:50</publishTime>
+    </File>
+    <File Include="Content/js/bootstrap-select.js">
+      <publishTime>07/24/2018 18:38:07</publishTime>
+    </File>
+    <File Include="Content/js/bootstrap-switch.js">
+      <publishTime>08/28/2013 04:27:04</publishTime>
+    </File>
+    <File Include="Content/js/bootstrap-wysiwyg-custom.js">
+      <publishTime>10/29/2013 16:14:04</publishTime>
+    </File>
+    <File Include="Content/js/bootstrap-wysiwyg.js">
+      <publishTime>07/29/2013 03:18:40</publishTime>
+    </File>
+    <File Include="Content/js/bootstrap.js">
+      <publishTime>08/19/2013 14:18:20</publishTime>
+    </File>
+    <File Include="Content/js/bootstrap.min.js">
+      <publishTime>08/19/2013 14:18:20</publishTime>
+    </File>
+    <File Include="Content/js/calendar-custom.js">
+      <publishTime>11/01/2013 17:37:22</publishTime>
+    </File>
+    <File Include="Content/js/chartjs-custom.js">
+      <publishTime>11/01/2013 17:07:00</publishTime>
+    </File>
+    <File Include="Content/js/charts-flot.js">
+      <publishTime>08/17/2014 21:44:32</publishTime>
+    </File>
     <File Include="Content/js/charts-home.js">
       <publishTime>01/19/2018 20:21:50</publishTime>
     </File>
+    <File Include="Content/js/charts-other.js">
+      <publishTime>08/17/2014 21:51:06</publishTime>
+    </File>
+    <File Include="Content/js/charts-xcharts.js">
+      <publishTime>08/17/2014 21:48:08</publishTime>
+    </File>
+    <File Include="Content/js/charts.js">
+      <publishTime>08/20/2014 21:01:20</publishTime>
+    </File>
     <File Include="Content/js/datatables.min.js">
-      <publishTime>01/19/2018 20:21:50</publishTime>
+      <publishTime>07/21/2018 07:18:33</publishTime>
+    </File>
+    <File Include="Content/js/daterangepicker.js">
+      <publishTime>12/13/2017 09:27:02</publishTime>
+    </File>
+    <File Include="Content/js/dynamic-table.js">
+      <publishTime>11/01/2013 17:16:52</publishTime>
+    </File>
+    <File Include="Content/js/easy-pie-chart.js">
+      <publishTime>11/01/2013 17:07:44</publishTime>
+    </File>
+    <File Include="Content/js/excanvas.min.js">
+      <publishTime>07/22/2014 13:41:26</publishTime>
+    </File>
+    <File Include="Content/js/form-component.js">
+      <publishTime>02/01/2018 17:59:50</publishTime>
+    </File>
+    <File Include="Content/js/form-validation-script.js">
+      <publishTime>10/29/2013 17:23:32</publishTime>
     </File>
     <File Include="Content/js/front.js">
       <publishTime>01/20/2018 13:24:55</publishTime>
+    </File>
+    <File Include="Content/js/fullcalendar.js">
+      <publishTime>07/20/2014 18:56:00</publishTime>
+    </File>
+    <File Include="Content/js/fullcalendar.min.js">
+      <publishTime>07/22/2014 13:42:28</publishTime>
+    </File>
+    <File Include="Content/js/ga.js">
+      <publishTime>02/26/2013 12:32:30</publishTime>
+    </File>
+    <File Include="Content/js/gdp-data.js">
+      <publishTime>08/17/2014 19:11:04</publishTime>
+    </File>
+    <File Include="Content/js/gritter.js">
+      <publishTime>09/16/2013 02:15:30</publishTime>
+    </File>
+    <File Include="Content/js/html5shiv.js">
+      <publishTime>08/19/2013 14:18:20</publishTime>
+    </File>
+    <File Include="Content/js/index.js">
+      <publishTime>08/23/2014 20:03:52</publishTime>
+    </File>
+    <File Include="Content/js/jquery-1.8.3.min.js">
+      <publishTime>01/31/2013 18:41:54</publishTime>
+    </File>
+    <File Include="Content/js/jquery-jvectormap-1.2.2.min.js">
+      <publishTime>08/17/2014 19:13:36</publishTime>
+    </File>
+    <File Include="Content/js/jquery-jvectormap-world-mill-en.js">
+      <publishTime>08/17/2014 19:14:04</publishTime>
+    </File>
+    <File Include="Content/js/jquery-ui-1.10.4.min.js">
+      <publishTime>08/17/2014 19:14:52</publishTime>
+    </File>
+    <File Include="Content/js/jquery-ui-1.9.2.custom.min.js">
+      <publishTime>11/30/2012 22:38:16</publishTime>
+    </File>
+    <File Include="Content/js/jquery.autosize.min.js">
+      <publishTime>08/17/2014 19:15:46</publishTime>
+    </File>
+    <File Include="Content/js/jquery.customSelect.min.js">
+      <publishTime>08/01/2013 16:46:10</publishTime>
+    </File>
+    <File Include="Content/js/jquery.flot.pie.js">
+      <publishTime>07/22/2014 13:45:38</publishTime>
+    </File>
+    <File Include="Content/js/jquery.hotkeys.js">
+      <publishTime>07/29/2013 03:18:40</publishTime>
+    </File>
+    <File Include="Content/js/jquery.js">
+      <publishTime>11/01/2014 22:52:18</publishTime>
+    </File>
+    <File Include="Content/js/jquery.localscroll.js">
+      <publishTime>10/31/2013 12:25:26</publishTime>
+    </File>
+    <File Include="Content/js/jquery.nicescroll.js">
+      <publishTime>07/26/2013 19:53:08</publishTime>
+    </File>
+    <File Include="Content/js/jquery.placeholder.min.js">
+      <publishTime>08/17/2014 19:19:28</publishTime>
+    </File>
+    <File Include="Content/js/jquery.rateit.min.js">
+      <publishTime>07/22/2014 13:49:26</publishTime>
+    </File>
+    <File Include="Content/js/jquery.scrollTo.min.js">
+      <publishTime>05/26/2013 16:26:10</publishTime>
+    </File>
+    <File Include="Content/js/jquery.slimscroll.min.js">
+      <publishTime>07/22/2014 13:49:54</publishTime>
+    </File>
+    <File Include="Content/js/jquery.smartWizard.js">
+      <publishTime>10/29/2013 16:37:36</publishTime>
+    </File>
+    <File Include="Content/js/jquery.sparkline-11.js">
+      <publishTime>10/08/2012 12:28:16</publishTime>
+    </File>
+    <File Include="Content/js/jquery.sparkline.js">
+      <publishTime>10/01/2013 22:40:58</publishTime>
+    </File>
+    <File Include="Content/js/jquery.stepy.js">
+      <publishTime>09/23/2013 15:12:28</publishTime>
+    </File>
+    <File Include="Content/js/jquery.tagsinput.js">
+      <publishTime>08/28/2013 04:27:04</publishTime>
+    </File>
+    <File Include="Content/js/jquery.validate.min.js">
+      <publishTime>10/30/2013 21:34:30</publishTime>
+    </File>
+    <File Include="Content/js/lte-ie7.js">
+      <publishTime>10/04/2013 01:50:02</publishTime>
+    </File>
+    <File Include="Content/js/moment.js">
+      <publishTime>02/01/2018 17:51:04</publishTime>
+    </File>
+    <File Include="Content/js/morris-script.js">
+      <publishTime>10/30/2013 00:41:14</publishTime>
+    </File>
+    <File Include="Content/js/morris.min.js">
+      <publishTime>07/22/2014 13:51:36</publishTime>
+    </File>
+    <File Include="Content/js/owl.carousel.js">
+      <publishTime>09/07/2013 15:32:52</publishTime>
+    </File>
+    <File Include="Content/js/scripts.js">
+      <publishTime>10/31/2013 16:39:02</publishTime>
+    </File>
+    <File Include="Content/js/sliders.js">
+      <publishTime>10/29/2013 14:29:20</publishTime>
+    </File>
+    <File Include="Content/js/sparkline-chart.js">
+      <publishTime>11/01/2013 17:11:04</publishTime>
+    </File>
+    <File Include="Content/js/sparklines.js">
+      <publishTime>07/22/2014 13:52:28</publishTime>
+    </File>
+    <File Include="Content/js/xcharts.min.js">
+      <publishTime>08/17/2014 19:23:14</publishTime>
     </File>
     <File Include="Content/Site.css">
       <publishTime>01/19/2018 20:21:54</publishTime>
@@ -559,10 +793,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/19/2018 22:27:42</publishTime>
     </File>
     <File Include="Views/Account/Login.cshtml">
-      <publishTime>04/25/2018 22:59:41</publishTime>
+      <publishTime>07/22/2018 16:37:38</publishTime>
     </File>
     <File Include="Views/Account/Register.cshtml">
-      <publishTime>01/20/2018 12:17:59</publishTime>
+      <publishTime>07/22/2018 16:38:25</publishTime>
     </File>
     <File Include="Views/Account/ResetPassword.cshtml">
       <publishTime>01/19/2018 22:27:42</publishTime>
@@ -580,19 +814,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/19/2018 22:27:42</publishTime>
     </File>
     <File Include="Views/Clientes/Create.cshtml">
-      <publishTime>02/02/2018 23:38:48</publishTime>
+      <publishTime>07/27/2018 18:21:39</publishTime>
     </File>
     <File Include="Views/Clientes/Delete.cshtml">
       <publishTime>02/02/2018 23:17:21</publishTime>
     </File>
     <File Include="Views/Clientes/Details.cshtml">
-      <publishTime>02/02/2018 23:17:57</publishTime>
+      <publishTime>07/21/2018 09:52:02</publishTime>
     </File>
     <File Include="Views/Clientes/Edit.cshtml">
-      <publishTime>03/06/2018 01:12:34</publishTime>
+      <publishTime>07/28/2018 08:35:39</publishTime>
+    </File>
+    <File Include="Views/Clientes/HistoricoPagos.cshtml">
+      <publishTime>07/28/2018 01:42:24</publishTime>
     </File>
     <File Include="Views/Clientes/Index.cshtml">
-      <publishTime>04/26/2018 00:04:54</publishTime>
+      <publishTime>07/28/2018 01:13:44</publishTime>
     </File>
     <File Include="Views/DetallePagoes/Create.cshtml">
       <publishTime>01/19/2018 22:27:42</publishTime>
@@ -610,13 +847,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/19/2018 22:27:42</publishTime>
     </File>
     <File Include="Views/Factura/AddProduct.cshtml">
-      <publishTime>04/25/2018 22:44:55</publishTime>
+      <publishTime>07/25/2018 22:56:52</publishTime>
+    </File>
+    <File Include="Views/Factura/Cuadre.cshtml">
+      <publishTime>07/28/2018 09:36:44</publishTime>
     </File>
     <File Include="Views/Factura/ListadoFactura.cshtml">
-      <publishTime>04/25/2018 22:53:01</publishTime>
+      <publishTime>07/27/2018 18:51:26</publishTime>
     </File>
     <File Include="Views/Factura/NuevaFactura.cshtml">
-      <publishTime>04/25/2018 22:49:35</publishTime>
+      <publishTime>07/28/2018 09:33:37</publishTime>
     </File>
     <File Include="Views/Factura/ReimprimirFactura.cshtml">
       <publishTime>01/19/2018 22:27:42</publishTime>
@@ -634,7 +874,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/19/2018 22:27:42</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>01/19/2018 22:27:42</publishTime>
+      <publishTime>07/27/2018 18:27:16</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
       <publishTime>01/19/2018 22:27:42</publishTime>
@@ -670,7 +910,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/19/2018 22:27:42</publishTime>
     </File>
     <File Include="Views/Plans/Create.cshtml">
-      <publishTime>02/02/2018 23:21:35</publishTime>
+      <publishTime>07/25/2018 23:32:55</publishTime>
     </File>
     <File Include="Views/Plans/Delete.cshtml">
       <publishTime>02/02/2018 23:22:51</publishTime>
@@ -682,10 +922,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/02/2018 23:24:09</publishTime>
     </File>
     <File Include="Views/Plans/Index.cshtml">
-      <publishTime>04/25/2018 22:56:21</publishTime>
+      <publishTime>07/27/2018 18:27:43</publishTime>
     </File>
     <File Include="Views/Products/Create.cshtml">
-      <publishTime>03/05/2018 00:27:42</publishTime>
+      <publishTime>07/25/2018 23:38:13</publishTime>
     </File>
     <File Include="Views/Products/Delete.cshtml">
       <publishTime>01/19/2018 22:27:42</publishTime>
@@ -697,7 +937,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/19/2018 22:27:42</publishTime>
     </File>
     <File Include="Views/Products/Index.cshtml">
-      <publishTime>04/25/2018 22:56:21</publishTime>
+      <publishTime>07/25/2018 23:48:44</publishTime>
     </File>
     <File Include="Views/Reportes/DSFACTURAS.xsc">
       <publishTime>01/19/2018 22:27:42</publishTime>
@@ -711,23 +951,32 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Reportes/DsTotalFacturas.xss">
       <publishTime>01/19/2018 22:27:42</publishTime>
     </File>
+    <File Include="Views/Reportes/Factura.rdlc">
+      <publishTime>03/03/2018 13:47:59</publishTime>
+    </File>
+    <File Include="Views/Reportes/FacturasRealizadas.rdlc">
+      <publishTime>01/19/2018 22:27:44</publishTime>
+    </File>
+    <File Include="Views/Reportes/Reimpresion.rdlc">
+      <publishTime>01/19/2018 22:27:44</publishTime>
+    </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>01/19/2018 22:32:42</publishTime>
     </File>
     <File Include="Views/Shared/Index_Layout.cshtml">
-      <publishTime>01/27/2018 05:53:22</publishTime>
+      <publishTime>07/19/2018 22:19:05</publishTime>
     </File>
     <File Include="Views/Shared/Lockout.cshtml">
       <publishTime>01/19/2018 22:27:44</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>02/10/2018 13:06:58</publishTime>
+      <publishTime>07/28/2018 07:16:47</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>01/19/2018 22:32:44</publishTime>
     </File>
     <File Include="Views/Sucursals/Create.cshtml">
-      <publishTime>03/05/2018 00:29:19</publishTime>
+      <publishTime>07/25/2018 23:33:45</publishTime>
     </File>
     <File Include="Views/Sucursals/Delete.cshtml">
       <publishTime>02/02/2018 23:08:06</publishTime>
@@ -739,7 +988,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/02/2018 23:09:29</publishTime>
     </File>
     <File Include="Views/Sucursals/Index.cshtml">
-      <publishTime>04/25/2018 22:56:19</publishTime>
+      <publishTime>07/25/2018 23:49:43</publishTime>
     </File>
     <File Include="Views/Tipoes/Create.cshtml">
       <publishTime>02/02/2018 23:11:55</publishTime>
@@ -772,7 +1021,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/19/2018 22:27:44</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>03/05/2018 00:34:20</publishTime>
+      <publishTime>08/04/2018 10:09:11</publishTime>
     </File>
   </ItemGroup>
 </Project>

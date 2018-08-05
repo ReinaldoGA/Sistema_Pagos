@@ -2,6 +2,7 @@
 using FunerariaProyecto.ViewModels;
 using Microsoft.Reporting.WebForms;
 using Newtonsoft.Json;
+using SistemaPagos.Models;
 using SistemaPagos.Views.Reportes;
 using System;
 using System.Collections.Generic;
@@ -35,10 +36,21 @@ namespace FunerariaProyecto.Controllers
             listp = listp.OrderBy(p => p.descripcion).ToList();
             ViewBag.PlanId = new SelectList(listp, "PlanId", "descripcion");
 
-            var list = db.Clientes.ToList();
-            list.Add(new Cliente { ClienteId = 0, Nombre = "[Seleccione un Cliente...]" });
-            list = list.OrderBy(c => c.Nombre).ToList();
-            ViewBag.ClienteId = new SelectList(list, "ClienteId", "Nombre");
+            ClientesViewModel clientes =  new ClientesViewModel();
+            var list = from r in db.Clientes
+                       join e in db.Plans on r.PlanId.ToString() equals e.PlanId.ToString()
+                       join s in db.Sucursals on r.SucursalId.ToString() equals s.SucursalId.ToString()
+                       // where ((r.ClienteId == clienteid || clienteid == null) && (e.SucursalId == sucursalid || sucursalid == null))
+                       select new ClientesViewModel()
+                       {
+                            Nombre = r.ClienteCodigo +"--" +s.Nombre +"--" + r.Nombre,
+                            ClienteId = r.ClienteId,
+                       };
+
+
+            var lista = list.ToList();
+            lista.Add((new ClientesViewModel { ClienteId = 0, Nombre = "[Seleccione un Cliente...]" }));
+            ViewBag.ClienteId = new SelectList(lista, "ClienteId", "Nombre",0);
 
 
             return View(facturaView);

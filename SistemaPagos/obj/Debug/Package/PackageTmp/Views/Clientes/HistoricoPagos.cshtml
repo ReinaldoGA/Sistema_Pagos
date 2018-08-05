@@ -1,0 +1,71 @@
+﻿@model List<FunerariaProyecto.ViewModels.FacturaView>
+
+@{
+    /**/
+
+    /**/
+
+
+    Layout = null;
+}
+
+@if (Model.Count > 0)
+{
+    <h2>@Model.FirstOrDefault().ClienteCodigo - @Model.FirstOrDefault().ClienteNombre</h2>
+
+
+    <table id="DataTable" class="table">
+        <tr>
+            <th>
+                No Factura
+            </th>
+            <th>
+                Descripcion
+            </th>
+            <th>
+                Cantidad
+            </th>
+            <th>
+                Total
+            </th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FacturaId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cantidad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.precio )
+                </td>
+
+            </tr>
+        }
+
+
+
+
+    </table>
+
+}
+else
+{<h2>No Existen pagos registrados de este Cliente</h2>}
+
+
+
+
+@section Scripts
+        {
+    <script src="~/Content/js/datatables.min.js"></script>
+    <script type="text/javascript">
+        $("#DataTable").DataTable();
+    </script>
+}

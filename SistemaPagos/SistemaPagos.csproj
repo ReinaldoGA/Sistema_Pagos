@@ -230,6 +230,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\ClienteDetalle.cs" />
+    <Compile Include="Models\ClientesViewModel.cs" />
     <Compile Include="Models\DetalleFactura.cs" />
     <Compile Include="Models\DetallePago.cs" />
     <Compile Include="Models\Factura.cs" />
@@ -432,10 +433,6 @@
     <Content Include="ReportViewerWebForm.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Content\fonts\dashboard.eot" />
-    <Content Include="Content\fonts\dashboard.svg" />
-    <Content Include="Content\fonts\dashboard.ttf" />
-    <Content Include="Content\fonts\dashboard.woff" />
     <Content Include="Content\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
     <Content Include="Content\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
@@ -599,11 +596,11 @@
     <EmbeddedResource Include="Migrations\201807280603504_third.resx">
       <DependentUpon>201807280603504_third.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Reportes\Factura.rdlc">
+    <Content Include="Views\Reportes\Factura.rdlc">
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Reportes\FacturasRealizadas.rdlc" />
-    <EmbeddedResource Include="Views\Reportes\Reimpresion.rdlc" />
+    </Content>
+    <Content Include="Views\Reportes\FacturasRealizadas.rdlc" />
+    <Content Include="Views\Reportes\Reimpresion.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
