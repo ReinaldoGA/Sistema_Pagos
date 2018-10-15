@@ -21,8 +21,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>0.01389in</Top>
-        <Left>5.46556cm</Left>
+        <Left>3.98964cm</Left>
         <Height>0.75269cm</Height>
         <Width>11.09896cm</Width>
         <Style>
@@ -54,8 +53,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>0.85852cm</Top>
-        <Left>5.46556cm</Left>
+        <Top>0.82324cm</Top>
+        <Left>3.98964cm</Left>
         <Height>0.6cm</Height>
         <Width>11.09896cm</Width>
         <ZIndex>1</ZIndex>
@@ -73,16 +72,16 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>5.46556cm</Width>
+              <Width>2.17147cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.46556cm</Width>
+              <Width>8.10641cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.46556cm</Width>
+              <Width>4.32462cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.99472cm</Width>
+              <Width>5.67983cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -100,7 +99,6 @@
                             <TextRun>
                               <Value>CANTIDAD</Value>
                               <Style>
-                                <FontSize>14pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -154,7 +152,6 @@
                             <TextRun>
                               <Value>DESCRIPCION</Value>
                               <Style>
-                                <FontSize>14pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -208,7 +205,6 @@
                             <TextRun>
                               <Value>PRECIO</Value>
                               <Style>
-                                <FontSize>14pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -262,7 +258,6 @@
                             <TextRun>
                               <Value>TOTAL</Value>
                               <Style>
-                                <FontSize>14pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -321,7 +316,7 @@
                             <TextRun>
                               <Value>=Fields!cantidad.Value</Value>
                               <Style>
-                                <FontSize>14pt</FontSize>
+                                <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -354,7 +349,7 @@
                             <TextRun>
                               <Value>=Fields!descripcion.Value</Value>
                               <Style>
-                                <FontSize>14pt</FontSize>
+                                <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -385,8 +380,8 @@
                             <TextRun>
                               <Value>=Fields!precio.Value</Value>
                               <Style>
-                                <FontSize>14pt</FontSize>
-                                <Format>0.00;(0.00)</Format>
+                                <FontSize>11pt</FontSize>
+                                <Format>'$'#,0.00;('$'#,0.00)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -402,6 +397,7 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
+                        <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -417,8 +413,8 @@
                             <TextRun>
                               <Value>=Fields!PRECIOTOTAL.Value</Value>
                               <Style>
-                                <FontSize>14pt</FontSize>
-                                <Format>0.00;(0.00)</Format>
+                                <FontSize>11pt</FontSize>
+                                <Format>'$'#,0.00;('$'#,0.00)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -436,6 +432,7 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
+                        <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -463,10 +460,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DsFacturas</DataSetName>
-        <Top>5.31346cm</Top>
-        <Left>0.16784cm</Left>
+        <Top>4.60763cm</Top>
+        <Left>0.02516cm</Left>
         <Height>1.2cm</Height>
-        <Width>22.3914cm</Width>
+        <Width>20.28233cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -491,8 +488,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>3.38905cm</Top>
-        <Left>1.83cm</Left>
+        <Top>2.68322cm</Top>
+        <Left>1.68732cm</Left>
         <Height>0.6cm</Height>
         <Width>9.26896cm</Width>
         <ZIndex>3</ZIndex>
@@ -523,8 +520,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>4.09488cm</Top>
-        <Left>2.40987cm</Left>
+        <Top>3.38905cm</Top>
+        <Left>2.26719cm</Left>
         <Height>0.6cm</Height>
         <Width>8.68909cm</Width>
         <ZIndex>4</ZIndex>
@@ -545,9 +542,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>="Fecha de Emision" &amp; " " &amp; First(Fields!FechaFactura.Value, "DsFacturas")</Value>
+                <Value>="Fecha: " &amp; " " &amp; First(Fields!FechaFactura.Value, "DsFacturas")</Value>
                 <Style>
-                  <FontSize>12pt</FontSize>
+                  <FontSize>11pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -556,9 +553,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>0.29178in</Top>
-        <Left>6.78909in</Left>
+        <Left>6.09665in</Left>
         <Height>0.6cm</Height>
-        <Width>5.81926cm</Width>
+        <Width>5.46646cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -587,10 +584,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>3.38905cm</Top>
-        <Left>14.87617cm</Left>
+        <Top>2.68322cm</Top>
+        <Left>13.34635cm</Left>
         <Height>0.6cm</Height>
-        <Width>7.68307cm</Width>
+        <Width>6.96114cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -609,7 +606,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>="Plan" &amp; " " &amp; First(Fields!descripcion1.Value, "DsFacturas")</Value>
+                <Value>=First(Fields!descripcion1.Value, "DsFacturas")</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -620,10 +617,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>4.09488cm</Top>
-        <Left>12.66249cm</Left>
+        <Top>3.42433cm</Top>
+        <Left>11.13267cm</Left>
         <Height>0.6cm</Height>
-        <Width>9.89675cm</Width>
+        <Width>9.17482cm</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -644,7 +641,7 @@
               <TextRun>
                 <Value>Factura No.</Value>
                 <Style>
-                  <FontSize>12pt</FontSize>
+                  <FontSize>11pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -654,9 +651,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox17</rd:DefaultName>
         <Top>0.01389in</Top>
-        <Left>17.24428cm</Left>
+        <Left>15.48547cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.67544cm</Width>
+        <Width>2.25211cm</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
@@ -677,7 +674,7 @@
               <TextRun>
                 <Value>=First(Fields!Numero.Value, "DsFacturas")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>11pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -686,7 +683,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox17</rd:DefaultName>
         <Top>0.01389in</Top>
-        <Left>19.955cm</Left>
+        <Left>17.84341cm</Left>
         <Height>0.6cm</Height>
         <Width>3.10854cm</Width>
         <ZIndex>9</ZIndex>
@@ -701,7 +698,7 @@
         </Style>
       </Textbox>
       <Line Name="Line1">
-        <Top>8.96526cm</Top>
+        <Top>8.6563cm</Top>
         <Left>0cm</Left>
         <Height>0cm</Height>
         <Width>6.12104cm</Width>
@@ -713,7 +710,7 @@
         </Style>
       </Line>
       <Line Name="Line2">
-        <Top>8.96526cm</Top>
+        <Top>8.6563cm</Top>
         <Left>13.72453cm</Left>
         <Height>0cm</Height>
         <Width>5.98419cm</Width>
@@ -733,7 +730,7 @@
               <TextRun>
                 <Value>ENTREGADO</Value>
                 <Style>
-                  <FontSize>12pt</FontSize>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -744,7 +741,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>8.96526cm</Top>
+        <Top>8.6563cm</Top>
         <Left>0.77269cm</Left>
         <Height>0.6cm</Height>
         <Width>4.48438cm</Width>
@@ -768,7 +765,7 @@
               <TextRun>
                 <Value>RECIBIDO</Value>
                 <Style>
-                  <FontSize>12pt</FontSize>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -779,7 +776,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>8.96526cm</Top>
+        <Top>8.6563cm</Top>
         <Left>14.62766cm</Left>
         <Height>0.6cm</Height>
         <Width>4.48438cm</Width>
@@ -812,8 +809,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>3.38905cm</Top>
-        <Left>0.16784cm</Left>
+        <Top>2.68322cm</Top>
+        <Left>0.02516cm</Left>
         <Height>0.6cm</Height>
         <Width>1.78563cm</Width>
         <ZIndex>14</ZIndex>
@@ -845,8 +842,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>4.09488cm</Top>
-        <Left>0.16784cm</Left>
+        <Top>3.38905cm</Top>
+        <Left>0.02516cm</Left>
         <Height>0.6cm</Height>
         <Width>2.17147cm</Width>
         <ZIndex>15</ZIndex>
@@ -878,8 +875,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>3.38905cm</Top>
-        <Left>12.66249cm</Left>
+        <Top>2.68322cm</Top>
+        <Left>11.13267cm</Left>
         <Height>0.6cm</Height>
         <Width>2.10785cm</Width>
         <ZIndex>16</ZIndex>
@@ -912,8 +909,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>1.59963cm</Top>
-        <Left>5.46556cm</Left>
+        <Top>1.56435cm</Top>
+        <Left>3.98964cm</Left>
         <Height>0.6cm</Height>
         <Width>11.09896cm</Width>
         <ZIndex>17</ZIndex>
@@ -936,7 +933,6 @@
               <TextRun>
                 <Value>TOTAL</Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -945,8 +941,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox22</rd:DefaultName>
-        <Top>7.01561cm</Top>
-        <Left>14.87617cm</Left>
+        <Top>5.98402cm</Top>
+        <Left>12.87964cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>18</ZIndex>
@@ -969,7 +965,6 @@
               <TextRun>
                 <Value>=Sum(Fields!PRECIOTOTAL.Value, "DsFacturas")</Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
                   <Format>0.00;(0.00)</Format>
                 </Style>
               </TextRun>
@@ -980,8 +975,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>7.01561cm</Top>
-        <Left>17.24428cm</Left>
+        <Top>5.98402cm</Top>
+        <Left>15.48547cm</Left>
         <Height>0.6cm</Height>
         <Width>4.82202cm</Width>
         <ZIndex>19</ZIndex>
@@ -1004,14 +999,14 @@
               <TextRun>
                 <Value>NOTA:</Value>
                 <Style>
-                  <FontSize>12pt</FontSize>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
               <TextRun>
                 <Value> FACTURA VALIDA SOLO CON SELLO SECO, EL SOCIO CON 3 MESES VENCIDO PIERDE LOS DERECHOS DE SERVICIOS</Value>
                 <Style>
-                  <FontSize>12pt</FontSize>
+                  <FontSize>9pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1019,7 +1014,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox24</rd:DefaultName>
-        <Top>3.06772in</Top>
+        <Top>2.78647in</Top>
+        <Left>0.00991in</Left>
         <Height>0.25in</Height>
         <Width>7.31241in</Width>
         <ZIndex>20</ZIndex>
@@ -1038,6 +1034,7 @@
         <Value>imagen</Value>
         <Sizing>FitProportional</Sizing>
         <Top>0.01389in</Top>
+        <Left>0.00991in</Left>
         <Height>0.85211in</Height>
         <Width>0.92099in</Width>
         <ZIndex>21</ZIndex>
@@ -1055,10 +1052,12 @@
       </Border>
     </Style>
   </Body>
-  <Width>9.08013in</Width>
+  <Width>8.3877in</Width>
   <Page>
     <PageHeight>6in</PageHeight>
     <PageWidth>11in</PageWidth>
+    <LeftMargin>0.25in</LeftMargin>
+    <TopMargin>0.75in</TopMargin>
     <ColumnSpacing>0.05118in</ColumnSpacing>
     <Style />
   </Page>
@@ -1069,6 +1068,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>bd360aa1-cb1b-41e6-8c44-58cfbb5daad2</rd:DataSourceID>
     </DataSource>
   </DataSources>

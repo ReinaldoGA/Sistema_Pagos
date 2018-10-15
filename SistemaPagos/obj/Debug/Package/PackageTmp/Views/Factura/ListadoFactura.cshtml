@@ -1,72 +1,104 @@
 ﻿@model IEnumerable<FunerariaProyecto.ViewModels.FacturaView>
 
 @{
-                /**/
+    /**/
 
-                /**/
+    /**/
 
-                ViewBag.Title = "Listado Factura";
-                ViewBag.Icon = "fa fa-search";
-                ViewBag.Parent = "Index";
-                Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Listado Factura";
+    ViewBag.Icon = "fa fa-search";
+    ViewBag.Parent = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @using (Html.BeginForm("GetFacturas", "Factura", FormMethod.Post, new { id = "formpdp", @class = "form-inline" }))
 {
 
-            <div class="panel panel-primary">
-                <header class="panel-heading blue">
-                    Criterio de Busqueda
-                </header>
-                <div class="panel-body">
-                    <div class="row m-bot15">
-                        <div class="col-sm-2 ">
-                            <label for="desde" class="control-label">Desde</label>
-                            <input class="form-control" name="desde" id="desde" type="date" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
-                        </div>
-                        <div class="col-sm-2 ">
+    <div class="panel panel-primary">
+        <header class="panel-heading blue">
+            Criterio de Busqueda
+        </header>
+        <div class="panel-body">
+            <div class="row m-bot15">
+                <div class="col-sm-2 ">
+                    <label for="desde" class="control-label">Desde</label>
+                    <input class="form-control" name="desde" id="desde" type="date" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
+                </div>
+                <div class="col-sm-2 ">
 
-                            <label for="hasta" class="control-label">Hasta</label>
-                            <input class="form-control" name="hasta" id="hasta" type="date" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
-                        </div>
-
-                        <div class="col-sm-3 ">
-                            <label for="clienteId" class="control-label">Clientes</label>
-                            @Html.DropDownList("clienteId", (SelectList)ViewBag.Clientes, "- Todos -", new { id = "clienteId", @class = "selectpicker" })
-
-                        </div>
-                        <div class="col-sm-2 ">
-                            <label for="sucursalId" class="control-label">Sucursales</label>
-                            @Html.DropDownList("sucursalId", (SelectList)ViewBag.Sucursal, "- Todos -", new { id = "sucursalId", @class = "form-control" })
-                        </div>
-                        <div class="col-sm-2 ">
-                            <label for="facEstatus" class="control-label">Estado</label>
-                            @Html.DropDownList("facEstatus", (SelectList)ViewBag.Estado, "- Todos -", new { id = "facEstatus", @class = "form-control" })
-                        </div>
-                        <div class="col-sm-2 ">
-                            <button type="button" id="btnBuscar" class="btn btn-primary">Buscar</button>
-                            <a role="button" id="btnReport" onclick="verreporte()" class="btn btn-info">Reporte</a>
-
-                        </div>
-                    </div>
-                    <table id="DataTable" class="table">
-                        <tfoot>
-                            <tr>
-                                <th colspan="5" style="text-align:right">Total:</th>
-                                <th></th>
-                            </tr>
-                        </tfoot>
-                    </table>
+                    <label for="hasta" class="control-label">Hasta</label>
+                    <input class="form-control" name="hasta" id="hasta" type="date" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
                 </div>
 
+                <div class="col-sm-3 ">
+                    <label for="clienteId" class="control-label">Clientes</label>
+                    @Html.DropDownList("clienteId", (SelectList)ViewBag.Clientes, "- Todos -", new { id = "clienteId", @class = "selectpicker" })
 
+                </div>
+                <div class="col-sm-2 ">
+                    <label for="sucursalId" class="control-label">Localidades</label>
+                    @Html.DropDownList("sucursalId", (SelectList)ViewBag.Sucursal, "- Todos -", new { id = "sucursalId", @class = "form-control" })
+                </div>
+                <div class="col-sm-2 ">
+                    <label for="facEstatus" class="control-label">Estado</label>
+                    @Html.DropDownList("facEstatus", (SelectList)ViewBag.Estado, "- Todos -", new { id = "facEstatus", @class = "form-control" })
+                </div>
+                <div class="col-sm-2 ">
+                    <button type="button" id="btnBuscar" class="btn btn-primary">Buscar</button>
+                    <a role="button" id="btnReport" onclick="verreporte()" class="btn btn-info">Reporte</a>
 
-               
+                </div>
             </div>
+            <table id="DataTable" class="table">
+                <tfoot>
+                    <tr>
+                        <th colspan="6" style="text-align:right">Total:</th>
+                        <th></th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+
+
+
+    </div>
 
 
 
 }
+
+
+@* Modal Anular *@
+@using (Html.BeginForm("AnularFactura", "Factura", FormMethod.Get))
+{
+    <input class="hidden" id="id" name="id" />
+
+   
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog modal-confirm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="icon-box">
+                        <i class="icon_close_alt2"></i>
+                    </div>
+
+                    <h4 class="modal-title">Esta Seguro?</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div>ADVERTENCIA!</div>
+                    <div> Se Anularan todos los elementos de esta factura. Desea Continuar?</div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-danger">Anular</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@* Fin Modal Anular *@
 
 @section scripts
 {
@@ -105,20 +137,21 @@
                             "ordering": false,
                             "processing": true,
                             "paging": true,
+                            "responsive": true,
                             //"dom": "<'table-wrapper'<t>><'row'><'row d-flex justify-content-between'<'col col-md-6'i>  <'col col-md-6'<'my-4'p>>>",
                             "data": datos,
                             "columns":
                             [
                                 {
                                     title: "No. Factura",
-                                    data : "FacturaId"
+                                        data: "FacturaNo"
                                 },
                                 {
                                     title: "Nombre Cliente",
                                     data: "ClienteNombre"
                                 },
                                 {
-                                    title: "Sucursal",
+                                    title: "Localidad",
                                     data: "ClienteSucursal"
                                 },
                                 {
@@ -129,13 +162,18 @@
                                     title: "Estado",
                                     data: "estado"
 
-                                },
+                                    },
+                                    {
+                                        title: "Concepto",
+                                        data: "ProductName"
+
+                                    },
                                 {
                                     title: "Monto",
-                                    data: "Monto",
+                                    data: "precio",
                                     "render": function (data)
                                     {
-                                        return data;
+                                        return  "$"+ data;
                                     }
                                 },
                                 {
@@ -153,9 +191,9 @@
                                     data: "FacturaId",
                                     "render": function (data)
                                     {
-                                        var link = '@Url.Action("AprobarFactura", "Factura", new  { id= "-1" })'
+                                        var link = '@Url.Action("AnularFactura", "Factura", new  { id= "-1" })'
                                             link = link.replace("-1", data);
-                                            return "<a title='Aprobar' href=" + link + "><i class='fa fa-check'></i></a>";
+                                        return '<a title="Anular" onclick="Asignar('+data+')"     href="#myModal" class="trigger - btn" data-toggle="modal"><i style="color:orange;" class="fa fa-ban"></i></a>';
                                     }
                                 },
                             ],
@@ -172,7 +210,7 @@
 
                                 // Total over all pages
                                 total = api
-                                    .column(5)
+                                    .column(6)
                                     .data()
                                     .reduce(function (a, b) {
                                         return intVal(a) + intVal(b);
@@ -180,14 +218,14 @@
 
                                 // Total over this page
                                 pageTotal = api
-                                    .column(5, { page: 'current' })
+                                    .column(6, { page: 'current' })
                                     .data()
                                     .reduce(function (a, b) {
                                         return intVal(a) + intVal(b);
                                     }, 0);
 
                                 // Update footer
-                                $(api.column(5).footer()).html(
+                                $(api.column(6).footer()).html(
                                     '  $' + total
                                 );
                             }
@@ -230,6 +268,9 @@
     <link rel="stylesheet" href="~/Content/css/bootstrap-select.min.css">
     <script type="text/javascript" src="~/Content/js/bootstrap-select.js"></script>
     <script type="text/javascript">
+        function Asignar(a) {
+            document.getElementById("id").value = a;
+        }
         $(document).ready(function () {
             document.getElementById("clienteId").setAttribute("data-live-search", "true");
             $('.selectpicker').selectpicker();

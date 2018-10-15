@@ -17,13 +17,16 @@
     <table id="DataTable" class="table">
         <tr>
             <th>
+               
+            </th>
+            <th>
                 No Factura
             </th>
             <th>
                 Descripcion
             </th>
             <th>
-                Cantidad
+                Fecha
             </th>
             <th>
                 Total
@@ -33,21 +36,24 @@
 
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FacturaId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ProductName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.cantidad)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.precio )
-                </td>
+        <tr>
+            <td>
+                @Html.HiddenFor(modelItem => item.FacturaId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FacturaNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClienteFecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.precio)
+            </td>
 
-            </tr>
+        </tr>
         }
 
 

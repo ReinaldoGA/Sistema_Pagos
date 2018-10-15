@@ -22,6 +22,8 @@ namespace FunerariaProyecto.ViewModels
 
         public int ProductoId { get; set; }
         public int FacturaId { get; set; }
+        public string FacturaNo { get; set; }
+
         public ProductFactura Products { get; set; }
         public List<ProductFactura> Product { get; set; }
         public string ClienteCodigo { get; internal set; }
@@ -31,5 +33,15 @@ namespace FunerariaProyecto.ViewModels
         public DateTime ClienteFecha { get; internal set; }
         public string ProductName { get; internal set; }
         public string UserName { get; internal set; }
+
+        public virtual List<Facturas> Facturas { get; set; }
+        public virtual List<DetalleFactura> DetalleFacturas { get; set; }
+        public virtual List<Sucursal> Sucursals { get; set; }
+        public virtual List<Plan> Plans { get; set; }
+        public virtual List<Cliente> Clientes { get; set; }
+
+
+
+
     }
 }

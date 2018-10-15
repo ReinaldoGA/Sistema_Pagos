@@ -36,7 +36,7 @@
 
                 </div>
                 <div class="col-sm-2 ">
-                    <label for="sucursalId" class="control-label">Sucursales</label>
+                    <label for="sucursalId" class="control-label">Localidades</label>
                     @Html.DropDownList("sucursalId", (SelectList)ViewBag.Sucursal, "- Todos -", new { id = "sucursalId", @class = "form-control" })
                 </div>
                 <div class="col-sm-2 ">
@@ -57,7 +57,7 @@
             <table id="DataTable" class="table">
                 <tfoot>
                     <tr>
-                        <th colspan="5" style="text-align:right">Total:</th>
+                        <th colspan="7" style="text-align:right">Total:</th>
                         <th></th>
                     </tr>
                 </tfoot>
@@ -73,6 +73,37 @@
 
 }
 
+@* Modal Anular *@
+@using (Html.BeginForm("AnularFactura2", "Factura", FormMethod.Get))
+{
+    <input class="hidden" id="id" name="id" />
+
+
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog modal-confirm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="icon-box">
+                        <i class="icon_close_alt2"></i>
+                    </div>
+
+                    <h4 class="modal-title">Esta Seguro?</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div>ADVERTENCIA!</div>
+                    <div> Se Anularan todos los elementos de esta factura. Desea Continuar?</div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-danger">Anular</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@* Fin Modal Anular *@
+
 @section scripts
 {
     <link type="text/css" href="~/Content/css/datatables.min.css" />
@@ -86,6 +117,8 @@
                 var desde = document.getElementById("desde");
                 var hasta = document.getElementById("hasta");
                 var facEstatus = document.getElementById('facEstatus');
+                var UserName = document.getElementById('UserName');
+
 
                 var Form = new FormData();
                 var Req = new XMLHttpRequest();
@@ -95,6 +128,8 @@
                 Form.append('sucursalid', Sucursal.value);
                 Form.append('clienteId', Cliente.value);
                 Form.append('facEstatus', facEstatus.value);
+                Form.append('UserName', UserName.value);
+
 
                 try {
                 Req.open("post", '@Url.Action("GetCuadre", "Factura")', true);
@@ -110,6 +145,7 @@
                             "ordering": false,
                             "processing": true,
                             "paging": true,
+                            "responsive": true,
                             //"dom": "<'table-wrapper'<t>><'row'><'row d-flex justify-content-between'<'col col-md-6'i>  <'col col-md-6'<'my-4'p>>>",
                             "data": datos,
                             "columns":
@@ -120,14 +156,14 @@
                                     },
                                 {
                                     title: "No. Factura",
-                                    data : "FacturaId"
+                                    data: "FacturaNo"
                                 },
                                 {
                                     title: "Nombre Cliente",
                                     data: "ClienteNombre"
                                 },
                                 {
-                                    title: "Sucursal",
+                                    title: "Localidad",
                                     data: "ClienteSucursal"
                                 },
                                 {
@@ -138,13 +174,18 @@
                                     title: "Estado",
                                     data: "estado"
 
-                                },
+                                    },
+                                    {
+                                        title: "Concepto",
+                                        data: "ProductName"
+
+                                    },
                                 {
                                     title: "Monto",
-                                    data: "Monto",
+                                    data: "precio",
                                     "render": function (data)
                                     {
-                                        return data;
+                                        return "$" + data;
                                     }
                                 },
                                 {
@@ -162,9 +203,9 @@
                                     data: "FacturaId",
                                     "render": function (data)
                                     {
-                                        var link = '@Url.Action("AprobarFactura", "Factura", new  { id= "-1" })'
+                                         var link = '@Url.Action("AnularFactura", "Factura", new  { id= "-1" })'
                                             link = link.replace("-1", data);
-                                            return "<a title='Aprobar' href=" + link + "><i class='fa fa-check'></i></a>";
+                                        return '<a title="Anular" onclick="Asignar('+data+')"     href="#myModal" class="trigger - btn" data-toggle="modal"><i style="color:orange;" class="fa fa-ban"></i></a>';
                                     }
                                 },
                             ],
@@ -239,6 +280,9 @@
     <link rel="stylesheet" href="~/Content/css/bootstrap-select.min.css">
     <script type="text/javascript" src="~/Content/js/bootstrap-select.js"></script>
     <script type="text/javascript">
+        function Asignar(a) {
+            document.getElementById("id").value = a;
+        }
         $(document).ready(function () {
             document.getElementById("clienteId").setAttribute("data-live-search", "true");
             $('.selectpicker').selectpicker();

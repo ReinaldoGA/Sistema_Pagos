@@ -1,0 +1,93 @@
+﻿@model  System.Data.EnumerableRowCollection<FunerariaProyecto.ViewModels.FacturaView>
+@{
+
+    Layout = null;
+}
+<html >
+<head>
+    <title>Recibo</title>
+</head>
+<body>
+    <div style='text-align:left'>
+        <img src='~/Content/img/hd.PNG' />
+    </div>
+   <div style='text-align:left'>
+        <h3>Funeraria Hato Damas</h3>
+        <p>Presente en tus Momentos Tristes</p>
+        <p>TEL.: 809-289-8181 / 829-521-2311</p>
+        <hr />
+        <div style='text-align:left'><strong>NoFactura: </strong>@Model.FirstOrDefault().FacturaNo</div>
+        <p><strong>Cliente: </strong> @Model.FirstOrDefault().ClienteNombre</p>
+        <p><strong>Telefono: </strong> @Model.FirstOrDefault().ClienteTelefono</p>
+        <p><strong>Direccion: </strong>@Model.FirstOrDefault().ClienteDireccion</p>
+        <p><strong>@Model.FirstOrDefault().ClientePlan</strong>($@Model.FirstOrDefault().precio)</p>
+        <hr />
+        <h4>Detalle Factura</h4>
+
+        <table style='text-align:left;font-size:13px;'>
+
+            <thead>
+
+                <tr>
+
+                    <th>Descripcion</th>
+
+                    <th>Monto</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+
+                        <td>@item.ProductName</td>
+
+                        <td>$ @item.precio</td>
+
+                    </tr>
+
+                }
+            </tbody>
+
+            <tfoot>
+
+                <tr>
+
+                    <th>Total</th>
+
+                    <th>$@Model.Sum(x => x.precio)</th>
+
+                </tr>
+
+            </tfoot>
+
+        </table>
+
+
+        <br />
+        <br />
+        <br />
+
+        <div>_________________________________________</div>
+        <div><strong>Entregado a: </strong> </div>
+        <br />
+    
+        @*<button type='button' id='imprimir' onclick='window.print();'>Imprimir</button>*@
+    </div>
+
+    @*<button type='button' onclick='window.location='http://funerariahatodamas.org/Factura/NuevaFactura'>Volver Atras</button>*@
+
+</body>
+</html>
+@*<script type='text/javascript'>
+
+    function imprimir() {
+        var Obj = document.getElementById('imprimir');
+        Obj.style.visibility = 'hidden';
+        window.print();
+    }
+
+</script>*@

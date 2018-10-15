@@ -69,17 +69,19 @@ namespace FunerariaProyecto.Controllers
                          join e in db.Clientes on r.ClienteId.ToString() equals e.ClienteId.ToString()
                          join s in db.DetalleFacturas on r.FacturaId.ToString() equals s.FacturaId.ToString()
                          join p in db.Products on s.productoId equals p.productoId
-                         where (e.ClienteId == ClienteId)
+                         where (e.ClienteId == ClienteId & r.FacEstatus == 1)
                          select new FacturaView()
                          {
                              ClienteNombre = e.Nombre,
                              ProductName = p.descripcion,
                              ClienteCodigo = e.ClienteCodigo,
                              FacturaId = r.FacturaId,
-                             cantidad = s.cantidad,
-                             precio  = s.precio
+                             FacturaNo = e.PlanId.ToString() + e.ClienteCodigo.ToString() +r.FacturaId.ToString(),
+                             ClienteFecha = r.FechaFactura,
+                             precio  = s.precio,
+                             ProductoId  = s.productoId
                          };
-            var resultado = result.ToList();
+            var resultado = result.ToList().OrderByDescending(x=>x.ProductoId).ToList();
             return View(resultado);
         }
         // POST: Clientes/Create
@@ -214,6 +216,8 @@ namespace FunerariaProyecto.Controllers
         // POST: Clientes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Delete")]
+
         public ActionResult DeleteConfirmed(int id)
         {
             Cliente cliente = db.Clientes.Find(id);

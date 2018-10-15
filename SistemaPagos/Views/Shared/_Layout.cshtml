@@ -7,7 +7,7 @@
     <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
     <meta name="author" content="GeeksLabs">
     <meta name="keyword" content="Funeraria, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
-    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="shortcut icon" href="~/favicon.PNG">
 
     <title>@ViewBag.Title Jabet's System</title>
     <!-- Bootstrap CSS -->
@@ -52,7 +52,7 @@
             </div>
 
             <!--logo start-->
-            <a href="../" class="logo"> <span class="lite">Jabet's Sistem</span></a>
+            <a href="../" class="logo"> <span class="lite">Jabet's System</span></a>
             <!--logo end-->
 
             <div class="hidden nav search-row" id="top_menu">
@@ -337,7 +337,10 @@
                                 <span class="menu-arrow arrow_carrot-right"></span>
                             </a>
                             <ul class="sub">
-                                <li>@Html.ActionLink("Pagos", "NuevaFactura", "Factura")</li>
+                                @if (User.IsInRole("Facturacion"))
+                                {
+                                    <li>@Html.ActionLink("Pagos", "NuevaFactura", "Factura")</li>
+                                }
                                 <li>@Html.ActionLink("Clientes", "Index", "Clientes")</li>
                                 <li>@Html.ActionLink("Productos", "Index", "Products")</li>
                                 <li>@Html.ActionLink("Plan", "Index", "Plans")</li>
