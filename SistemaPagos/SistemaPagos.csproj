@@ -44,8 +44,17 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlRenderer, Version=1.5.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlRenderer.Core.1.5.0.5\lib\net45\HtmlRenderer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlRenderer.PdfSharp, Version=1.5.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlRenderer.PdfSharp.1.5.0.6\lib\net45\HtmlRenderer.PdfSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="IronPdf, Version=4.4.9.15720, Culture=neutral, PublicKeyToken=94e1c31412563c75, processorArchitecture=MSIL">
       <HintPath>..\packages\IronPdf.4.4.9\lib\net40\IronPdf.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
@@ -66,6 +75,14 @@
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.Charting.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="ReportViewerForMvc, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ReportViewerForMvc.1.1.1\lib\net45\ReportViewerForMvc.dll</HintPath>
@@ -93,6 +110,7 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
@@ -207,20 +225,17 @@
     <Compile Include="Controllers\PagoesController.cs" />
     <Compile Include="Controllers\PlansController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\PruebaController.cs" />
     <Compile Include="Controllers\SucursalsController.cs" />
     <Compile Include="Controllers\TipoesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201801201430064_InitialCreate.cs" />
-    <Compile Include="Migrations\201801201430064_InitialCreate.Designer.cs" />
-    <Compile Include="Migrations\201801202110563_Inicial.cs" />
-    <Compile Include="Migrations\201801202110563_Inicial.Designer.cs" />
-    <Compile Include="Migrations\201807221525145_Second.cs" />
-    <Compile Include="Migrations\201807221525145_Second.Designer.cs" />
-    <Compile Include="Migrations\201807280603504_third.cs" />
-    <Compile Include="Migrations\201807280603504_third.Designer.cs" />
+    <Compile Include="Migrations\201810151419025_Four.cs" />
+    <Compile Include="Migrations\201810151419025_Four.Designer.cs">
+      <DependentUpon>201810151419025_Four.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Cliente.cs" />
@@ -941,6 +956,8 @@
     <Content Include="Views\Reportes\CuadreListado.xsc">
       <DependentUpon>CuadreListado.xsd</DependentUpon>
     </Content>
+    <Content Include="Views\Prueba\NuevaFactura.cshtml" />
+    <Content Include="Views\Prueba\AddProduct.cshtml" />
     <None Include="Views\Reportes\CuadreListado.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -1082,6 +1099,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\assets\jquery-file-upload\server\php\files\thumbnail\" />
+    <Folder Include="Descargas\" />
+    <Folder Include="Views\Descargas\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -1102,11 +1121,12 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201801201430064_InitialCreate.resx" />
-    <EmbeddedResource Include="Migrations\201801202110563_Inicial.resx" />
-    <EmbeddedResource Include="Migrations\201807221525145_Second.resx" />
-    <EmbeddedResource Include="Migrations\201807280603504_third.resx" />
     <Content Include="Views\Reportes\Conduce80MM.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201810151419025_Four.resx">
+      <DependentUpon>201810151419025_Four.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -1126,7 +1146,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>3764</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:1248/</IISUrl>
+          <IISUrl>http://localhost:8080/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

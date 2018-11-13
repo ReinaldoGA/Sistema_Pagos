@@ -1,0 +1,180 @@
+﻿@model FunerariaProyecto.ViewModels.FacturaView
+@{
+    /**/
+
+    ViewBag.Title = "Pagos";
+    ViewBag.Icon = "fa fa-dollar";
+    ViewBag.Parent = "Index";
+}
+<script>var detalles = []</script>
+<script>var detallesnumero = []</script>
+
+
+
+@using (Html.BeginForm("NuevaFactura", "Prueba", FormMethod.Post, new { @class = "form-validate" }))
+{
+    <input name="ClienteId2" id="ClienteId2" hidden />
+
+    @Html.AntiForgeryToken()
+    <div class="card">
+        <div class="card-body">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <section class="panel">
+                <header class="panel-heading">
+                    Agregar Pago Nuevo
+                </header>
+                <input id="dtDetalles" name="dtDetalles" style="visibility:hidden;" />
+                <input id="dtDetallesNumeros" name="dtDetallesNumeros" style="visibility:hidden;" />
+
+                <div class="panel-body">
+                    <div class="row m-bot15">
+                        <div class="col-sm-3 ">
+                            @Html.DropDownList("ClienteId", null, htmlAttributes: new { @class = "selectpicker", id = "ClienteId" })
+                            @*@Html.ValidationMessageFor(model => model.Cliente.ClienteId, "", new { @class = "text-danger" })*@
+                        </div>
+                        @*@Html.ActionLink("Agregar Pagos", "AddProduct", new { @class="btn btn-primary", id="AddProduct"}) *@
+                        @*<input type="button" value="Agregar Pagos" id="AddProduct" class="btn btn-primary" />*@
+                        <input type="reset" onclick="location.replace('../Factura/NuevaFactura');" value="Nuevo" class="btn btn-info" />
+                        <input type="submit" formtarget="_blank" value="Guardar Pago" id="NuevaFactura" class="btn btn-success" />
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <section class="panel">
+                                <header class="panel-heading">
+                                    Agregar Detalle
+                                    <a class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="AddProduct"><i class="fa fa-plus"></i></a>
+                                </header>
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <tr>
+                                            <th>
+                                                Descripcion
+                                            </th>
+                                            <th>
+                                                Precio
+                                            </th>
+
+                                            <th>
+                                                Neto
+                                            </th>
+
+                                        </tr>
+                                        @for (int i = 0; i < Model.Product.Count; i++)
+                                        {
+                                            <script type='text/javascript'>
+                                                detalles.push({ "descripcion": '@Model.Product[i].descripcion', "precio": '@float.Parse(Model.Product[i].precio.ToString())', "cantidad": '1', "valor": '@Model.Product[i].valor', "productoId": '@Model.Product[i].productoId' });
+            detallesnumero.push({ "productoId": '@Model.Product[i].productoId' });
+
+                                            </script>
+                                            <tr>
+                                                <td>
+                                                    @Model.Product[i].descripcion
+                                                </td>
+                                                <td>
+                                                    @Model.Product[i].precio
+                                                </td>
+
+                                                <td>
+                                                    @(Double.Parse(Model.Product[i].precio.ToString()) * Double.Parse(Model.Product[i].cantidad.ToString()))
+                                                </td>
+
+                                            </tr>
+                                        }
+                                        <tfoot>
+
+                                            <tr>
+                                                <td></td>
+                                                <td style="background-color:aqua">Total :</td>
+
+                                                <td style="background-color:aqua" colspan="3"><strong>$@Model.Product.Sum(x => x.precio)</strong></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+        </div>
+    </div>
+}
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Agregando Detalle</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="modalAddBody">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+@section Scripts
+{
+    <script type="text/javascript">
+        var dtDetalle = document.getElementById("dtDetalles");
+        var dtDetallenumero = document.getElementById("dtDetallesNumeros");
+
+
+        dtDetalle.value = JSON.stringify(detalles);
+
+
+        var cliente = document.getElementById("ClienteId");
+        var cliente2 = document.getElementById("ClienteId2");
+
+
+        if (cliente.value != 0) {
+            $('.selectpicker').prop('disabled', true);
+        }
+        var producto = document.getElementById("Addproduct");
+
+        $("#AddProduct").click(function () {
+
+            if (cliente.value != 0) {
+
+                dtDetallenumero.value = JSON.stringify(detallesnumero);
+
+                var url = "/Prueba/AddProduct?dtDetalle=" + (dtDetallenumero.value === "[]" || dtDetallenumero.length == 0 || dtDetallenumero.value == null ? "" : dtDetallenumero.value) + "&ClienteId=" + cliente.value
+                console.log(url);
+                $("#modalAddBody").load(url, function () {
+                    $("#myModal").modal("show");
+
+                });
+            } else {
+
+                $('.alert').alert()
+
+            }
+
+        });
+        cliente2.value = cliente.value;
+
+
+
+    </script>
+
+    <link rel="stylesheet" href="~/Content/css/bootstrap-select.min.css">
+    <script type="text/javascript" src="~/Content/js/bootstrap-select.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            document.getElementById("ClienteId").setAttribute("data-live-search", "true");
+            $('.selectpicker').selectpicker();
+        });
+    </script>
+
+}

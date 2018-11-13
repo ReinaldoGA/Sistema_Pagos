@@ -274,3 +274,205 @@ D:\WorkSpace\Sistema De Pagos - Copy\SistemaPagos\obj\Release\SistemaPagos.Migra
 D:\WorkSpace\Sistema De Pagos - Copy\SistemaPagos\obj\Release\SistemaPagos.csproj.GenerateResource.cache
 D:\WorkSpace\Sistema De Pagos - Copy\SistemaPagos\bin\IronPdf.dll
 D:\WorkSpace\Sistema De Pagos - Copy\SistemaPagos\bin\IronPdf.xml
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\SqlServerTypes\x64\msvcr120.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\SqlServerTypes\x86\msvcr120.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\SistemaPagos.dll.config
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\SistemaPagos.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\SistemaPagos.pdb
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Antlr3.Runtime.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\EntityFramework.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\EntityFramework.SqlServer.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\HtmlRenderer.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\HtmlRenderer.PdfSharp.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.Owin.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.Owin.Security.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.SqlServer.Types.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Newtonsoft.Json.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Owin.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\PdfSharp.Charting.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\PdfSharp.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\ReportViewerForMvc.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\System.Data.Entity.Repository.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\System.Web.Helpers.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\System.Web.Http.Common.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\System.Web.Mvc.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\System.Web.Optimization.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\System.Web.Razor.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\System.Web.WebPages.Deployment.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\System.Web.WebPages.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\System.Web.WebPages.Razor.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\WebGrease.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\HtmlRenderer.pdb
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\HtmlRenderer.PdfSharp.pdb
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\PdfSharp.xml
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\PdfSharp.Charting.xml
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\System.Web.Http.Common.xml
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\System.Web.Helpers.xml
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\System.Web.Mvc.xml
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\System.Web.Optimization.xml
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\System.Web.Razor.xml
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\System.Web.WebPages.xml
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\System.Web.WebPages.Deployment.xml
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\System.Web.WebPages.Razor.xml
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Antlr3.Runtime.pdb
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Newtonsoft.Json.xml
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\EntityFramework.xml
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\EntityFramework.SqlServer.xml
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.Owin.xml
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.Owin.Security.xml
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\de\PdfSharp.resources.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\de\PdfSharp.Charting.resources.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\es\System.Web.Helpers.resources.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\es\System.Web.Mvc.resources.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\es\System.Web.Optimization.resources.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\es\System.Web.Razor.resources.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\es\System.Web.WebPages.resources.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\es\EntityFramework.resources.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\es\EntityFramework.SqlServer.resources.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\es\Microsoft.Owin.resources.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\es\Microsoft.Owin.Security.resources.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\es\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\obj\Release\SistemaPagos.csprojResolveAssemblyReference.cache
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\obj\Release\SistemaPagos.csproj.GenerateResource.Cache
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\obj\Release\SistemaPagos.dll
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\obj\Release\SistemaPagos.pdb
+C:\Users\rgarcia\Desktop\rgarcia\Personal\program\Sistema_Pagos\SistemaPagos\obj\Release\SistemaPagos.Migrations.Four.resources
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\SqlServerTypes\x64\msvcr120.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\SqlServerTypes\x86\msvcr120.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\SistemaPagos.dll.config
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\SistemaPagos.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\SistemaPagos.pdb
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Antlr3.Runtime.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\EntityFramework.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\EntityFramework.SqlServer.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\HtmlRenderer.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\HtmlRenderer.PdfSharp.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\IronPdf.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.Owin.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.Owin.Security.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.Owin.Security.Google.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.ReportViewer.Common.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.ReportViewer.DataVisualization.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.ReportViewer.WebForms.DLL
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.SqlServer.Types.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.Web.Infrastructure.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Newtonsoft.Json.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Owin.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\PdfSharp.Charting.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\PdfSharp.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\ReportViewerForMvc.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\System.Data.Entity.Repository.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\System.Web.Helpers.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\System.Web.Http.Common.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\System.Web.Mvc.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\System.Web.Optimization.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\System.Web.Razor.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\System.Web.WebPages.Deployment.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\System.Web.WebPages.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\System.Web.WebPages.Razor.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\WebGrease.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\HtmlRenderer.pdb
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\HtmlRenderer.PdfSharp.pdb
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\IronPdf.xml
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\PdfSharp.xml
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\PdfSharp.Charting.xml
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\System.Web.Http.Common.xml
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\System.Web.Helpers.xml
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\System.Web.Mvc.xml
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\System.Web.Optimization.xml
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\System.Web.Razor.xml
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\System.Web.WebPages.xml
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\System.Web.WebPages.Deployment.xml
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\System.Web.WebPages.Razor.xml
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Antlr3.Runtime.pdb
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Newtonsoft.Json.xml
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\EntityFramework.xml
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\EntityFramework.SqlServer.xml
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.Owin.xml
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.Owin.Security.xml
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.Owin.Security.Google.xml
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\de\PdfSharp.resources.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\de\PdfSharp.Charting.resources.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\es\System.Web.Helpers.resources.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\es\System.Web.Mvc.resources.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\es\System.Web.Optimization.resources.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\es\System.Web.Razor.resources.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\es\System.Web.WebPages.resources.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\es\EntityFramework.resources.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\es\EntityFramework.SqlServer.resources.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\es\Microsoft.Owin.resources.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\es\Microsoft.Owin.Security.resources.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\es\Microsoft.Owin.Security.Google.resources.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\obj\Release\SistemaPagos.csprojAssemblyReference.cache
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\obj\Release\SistemaPagos.Migrations.Four.resources
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\obj\Release\SistemaPagos.csproj.GenerateResource.cache
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\obj\Release\SistemaPagos.csproj.CoreCompileInputs.cache
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\obj\Release\SistemaPagos.csproj.CopyComplete
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\obj\Release\SistemaPagos.dll
+D:\Visual Studio Proyects\SistemaPagos\SistemaPagos\obj\Release\SistemaPagos.pdb

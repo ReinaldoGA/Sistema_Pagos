@@ -15,6 +15,7 @@ using System.Drawing.Printing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Web;
 using System.Web.Mvc;
@@ -133,7 +134,7 @@ namespace FunerariaProyecto.Controllers
                                 db.DetalleFacturas.Add(datosDetalle);
                             }
 
-                           db.SaveChanges();
+                           //db.SaveChanges();
                         }
                         else
                         {
@@ -372,7 +373,7 @@ namespace FunerariaProyecto.Controllers
                 facs.FacEstatus = 0;
             }
 
-            db.SaveChanges();
+            // db.SaveChanges();
             return RedirectToAction("ListadoFactura");
         }
 
@@ -387,7 +388,7 @@ namespace FunerariaProyecto.Controllers
                 facs.FacEstatus = 0;
             }
 
-            db.SaveChanges();
+         //   db.SaveChanges();
             return RedirectToAction("Cuadre");
         }
 
@@ -597,8 +598,8 @@ namespace FunerariaProyecto.Controllers
 
 
 
-                //             var Renderer = new IronPdf.HtmlToPdf();
-                var PDF =
+                         var Renderer = new IronPdf.HtmlToPdf();
+                var PDF = Renderer.RenderHtmlAsPdf(
     @"<div style = 'text-align:left' >"
         + "<img src = '~/Content/img/hd.PNG' />"
     + "</div>"
@@ -693,21 +694,45 @@ namespace FunerariaProyecto.Controllers
             + "   < br />"
 
 
-   + " </ div >";
+   + " </ div >");
 
                 //var pdff = Renderer.RenderHtmlAsPdf(PDF);
                 //  var OutputPath = "Recibo.pdf";
                 // PDF.SaveAs(Path.Combine(Request.PhysicalApplicationPath, OutputPath));
-                PdfDocument pdf = PdfGenerator.GeneratePdf(PDF, PageSize.Tabloid);
+               // var OutputPath = "recibo.pdf";
+                //PDF.SaveAs(OutputPath);
+                //PDF.SaveAs(OutputPath);
+                //PDF.SaveAs(OutputPath);
+                FtpWebRequest request;
 
-                var root = "www.funerariahatodamas.org/Descargas";
+                string folderName = "/httpdocs/Descargas/";
+                string fileName = "recibo.pdf";
+                string absoluteFileName = Path.GetFileName("recibo.pdf");
 
+                request = WebRequest.Create(new Uri(string.Format(@"ftp://{0}/{1}/{2}", "107.180.46.211", folderName, absoluteFileName))) as FtpWebRequest;
+                request.Method = WebRequestMethods.Ftp.UploadFile;
+                request.UseBinary = true;
+                request.UsePassive = true;
+                request.KeepAlive = true;
+                request.Credentials = new NetworkCredential("reinaldo", "123reynal2");
+                request.ConnectionGroupName = "group";
 
-                pdf.Save(root + "//recibo.pdf" );
-                Response.Clear();
-                Response.AddHeader("content-disposition", "attachment;filename=" + root + "//recibo.pdf");
-                Response.WriteFile(root+ "//recibo.pdf");
-                Response.End();
+                using (FileStream fs = System.IO.File.OpenRead(fileName))
+                {
+                    byte[] buffer = new byte[fs.Length];
+                    fs.Read(buffer, 0, buffer.Length);
+                    fs.Close();
+                    Stream requestStream = request.GetRequestStream();
+                    requestStream.Write(buffer, 0, buffer.Length);
+                    requestStream.Flush();
+                    requestStream.Close();
+                }
+
+                //pdf.Save(root + "//recibo.pdf" );
+                //Response.Clear();
+                //Response.AddHeader("content-disposition", "attachment;filename=" + root + "//recibo.pdf");
+                //Response.WriteFile(root+ "//recibo.pdf");
+                //Response.End();
                 // This neat trick opens our PDF file so we can see the result in our default PDF viewer
                 //System.Diagnostics.Process.Start(OutputPath);
 

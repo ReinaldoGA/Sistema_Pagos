@@ -360,12 +360,23 @@
                     }@if (User.IsInRole("SuperAdmin"))
 
                     {
+                      
+                        <li>
+                            <a href="@Url.Action("Cuadre","Factura")"> <i class="fa fa-money"></i>Cuadre de caja</a>
+                            @*    @Html.ActionLink("Usuarios", "Index", "Users")*@
+                        </li>
+                    }
+                    @if (User.IsInRole("Usuario"))
+                    {
                         <li>
                             <a href="@Url.Action("Index","Users")"> <i class="fa fa-user"></i>Usuarios</a>
                             @*    @Html.ActionLink("Usuarios", "Index", "Users")*@
                         </li>
+                    }
+                    @if (User.IsInRole("Prueba"))
+                    {
                         <li>
-                            <a href="@Url.Action("Cuadre","Factura")"> <i class="fa fa-money"></i>Cuadre de caja</a>
+                            <a href="@Url.Action("NuevaFactura","Prueba")"> <i class="fa fa-user"></i>Prueba Conduce80MM</a>
                             @*    @Html.ActionLink("Usuarios", "Index", "Users")*@
                         </li>
                     }
